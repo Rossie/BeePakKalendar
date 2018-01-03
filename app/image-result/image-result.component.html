@@ -1,0 +1,33 @@
+<AbsoluteLayout class="mainLayout">
+    <Image class="resultImage" #imgResult stretch="aspectFit"></Image>
+    <DockLayout class="dockLayout" stretchLastChild="false"> 
+        <StackLayout orientation="vertical" dock="bottom">
+            <Button class="btn btn-primary btn-active" (tap)="setWallpaper()">
+                <FormattedString>
+                    <Span text="&#xf03e;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text=" Háttérképnek"></Span>
+                </FormattedString>
+            </Button>
+            <!-- <Button class="btn btn-primary btn-active" text="Mentés képekhez" (tap)="saveToFile()"></Button> -->
+            <Button class="btn btn-primary btn-active" (tap)="share()">
+                <FormattedString>
+                    <Span text="&#xf1e0;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text=" Megosztás"></Span>
+                </FormattedString>        
+            </Button>
+            <Button class="btn btn-primary btn-active" (tap)="exit()">
+                <FormattedString>
+                    <Span text="&#xf08b;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text=" Kilép"></Span>
+                </FormattedString>                
+            </Button>
+        </StackLayout>
+    </DockLayout>
+</AbsoluteLayout>
+<ActionBar title="test" android.icon="res://icon" android.iconVisibility="always">
+    <StackLayout orientation="horizontal"
+      ios:horizontalAlignment="center"
+      android:horizontalAlignment="left">
+      <Label text="BeePakKalendar" class="action-bar-title"></Label>
+    </StackLayout>
+</ActionBar>

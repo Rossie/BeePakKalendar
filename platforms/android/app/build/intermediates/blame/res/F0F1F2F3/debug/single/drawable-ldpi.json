@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-ldpi\\background.png",
+        "source": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\src\\main\\res\\drawable-ldpi\\background.png"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-ldpi\\logo.png",
+        "source": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\src\\main\\res\\drawable-ldpi\\logo.png"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-ldpi\\icon.png",
+        "source": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\src\\main\\res\\drawable-ldpi\\icon.png"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\xml\\chart_palettes_default_dark.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\0d5f497d052e6ac47980bcbed0787f196a7b456a\\output\\res\\xml\\chart_palettes_default_dark.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\xml\\chart_palettes_default_light.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\0d5f497d052e6ac47980bcbed0787f196a7b456a\\output\\res\\xml\\chart_palettes_default_light.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\xml\\chart_palettes_dark_selected.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\0d5f497d052e6ac47980bcbed0787f196a7b456a\\output\\res\\xml\\chart_palettes_dark_selected.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\xml\\chart_palettes_light_selected.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\0d5f497d052e6ac47980bcbed0787f196a7b456a\\output\\res\\xml\\chart_palettes_light_selected.xml"
+    }
+]

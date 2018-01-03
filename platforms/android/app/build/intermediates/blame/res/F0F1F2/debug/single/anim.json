@@ -1,0 +1,82 @@
+[
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\ucrop_loader_circle_scale.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\66b879883dbc937e7c2aeae72caedef22c59e9ef\\output\\res\\anim\\ucrop_loader_circle_scale.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_slide_out_bottom.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_slide_in_top.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\design_fab_in.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\anim\\design_fab_in.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\ucrop_loader_circle_path.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\66b879883dbc937e7c2aeae72caedef22c59e9ef\\output\\res\\anim\\ucrop_loader_circle_path.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_popup_exit.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_popup_exit.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_grow_fade_in_from_bottom.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_fade_in.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_fade_in.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\design_bottom_sheet_slide_in.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\anim\\design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\design_snackbar_in.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\anim\\design_snackbar_in.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\drawer_slide_out_top.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\501d33518ef88871af2cd26745ed42be2553fc11\\output\\res\\anim\\drawer_slide_out_top.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_slide_in_bottom.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_fade_out.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_fade_out.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_shrink_fade_out_from_bottom.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\abc_popup_enter.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\anim\\abc_popup_enter.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\design_snackbar_out.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\anim\\design_snackbar_out.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\design_bottom_sheet_slide_out.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\anim\\design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\drawer_slide_in_top.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\501d33518ef88871af2cd26745ed42be2553fc11\\output\\res\\anim\\drawer_slide_in_top.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2\\debug\\anim\\design_fab_out.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\anim\\design_fab_out.xml"
+    }
+]

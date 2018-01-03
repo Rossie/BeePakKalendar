@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\ae8082099d491286325977b4e6ffdcf9529fe555\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce22401852bd9e460265a9a1567f7cedb6fc91b9">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_473ba93295372c8c5c254437274c2cb26558d812.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\ee5080e72285bf5173833a30572d53141f3bbd3b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ae411cd0dd58ad905486a0bc7931ec5adf3a2d13">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_1551dbfa0745da2ea8721c0e5aaf2be7b861666a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\31c7e6c8b3f81083ddc60bbf219149cb1cbadc5c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ffa5b2e37c626bd25cfbff4df099cdf068595f9">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_21be14cf687b114af8254c3533dc4143c9835778.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\871fe4dead6644618de859804efa55c39247e025\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="21ece50b870a8bea45608a6748ad60112d5d9ed1">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_0a2e60bf4807bcd654d1a594dc4f6445556ccadf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\77c640e0c6281e6f92d48f5f6b20ac94a9cda1f7\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0eed9e468431f447bf63f3a0cee23418e8994411">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_6ddfcddf6e4893da396aec9e81d1b73f47e5a11b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\501d33518ef88871af2cd26745ed42be2553fc11\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="16dfa5cc51cd9a9e2809e48ceb26724a29861fdd">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_b9364880310d29a96cf59d23a1b1d4ac1ff099b4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\5c517efa59a04d8ac8fae8a51bd556a8bcd64093\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_7f9cab783cd1e7f183eca11f1f9d589f78e65709.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\ee2d7727121a7b69676064f84cd5eb9e90a10164\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ae411cd0dd58ad905486a0bc7931ec5adf3a2d13">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_9730f6c7adade1b1a9eb52f5ac31c9528b96799c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\2468a628e5770d518dc74a8a9780eb88033bc886\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="16dfa5cc51cd9a9e2809e48ceb26724a29861fdd">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_89f22fbff15af7a1d432b229ecf90e2ef9d48c69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\c0f38795f740e8f7ab16136d241753fbeacc8fc5\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_1972552dd84c05db8316573d6809218909850520.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\8daee6cfad27c01a3e2ed293aa970f88b815f2b6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9ffa5b2e37c626bd25cfbff4df099cdf068595f9">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_e9f2b722828edd4a81e4ef4f86d432d385ce8f4d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\ffbacb89fb95df2d76f4dbc7392c8490b149a9a1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2e492787f157c13839c02e0b7293871dbaed9911">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_bf6768d386e7e4c008f5b76df47a16d3ad2f86a1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\3c7a92eab9e743683ffe253035c005731fbc628a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="556dc4e7734c7445d7310a625fad89c5be6728b2">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_cb2de4cf77b64b9bdce09b44a8d35005dcbcb15c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\0d5f497d052e6ac47980bcbed0787f196a7b456a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="21ece50b870a8bea45608a6748ad60112d5d9ed1">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_4f778c6267b9ca6a5b20e4efa5cf52d3d92465a2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\584ffa8fc35ebb3173b069bbf4f756a42a33d005\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0eed9e468431f447bf63f3a0cee23418e8994411">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_1da12385f6839c3b699b3b6264a1cea16b70caad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\901016fd975292af4e16c4552f43c94dafd34347\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4df8aad66215f497722e05820383f9ff04796fea">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_4da6174fc5263da2b647c9c0035e8a3fbf188256.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\8ef6dfe8d27606b969505d5fbba19f9149913dc1\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dd431d6aa9ce9dc0d429fcd239d412a82ea0e9a7">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\debug\classes_8bf92e03418509e19a8b57b44ee8851131cc896c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\66b879883dbc937e7c2aeae72caedef22c59e9ef\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9d27a85b9b7774bb4aad8b319e8367865729686e">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\classes_68065866a0d290fed619e20bed70f46400813adc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\3cb61d34bd485c59cc929c402026aa1b79be2b43\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="556dc4e7734c7445d7310a625fad89c5be6728b2">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_f72700aecd5699dc8696bf9789e13e928934fa1c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\30e9f0421568fbd9327df4f5110e0e88098c216a\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4df8aad66215f497722e05820383f9ff04796fea">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_0f4833e562d6106b2a40d5ba2f5e592d46bece0b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.9.0\f824591a0016efbaeddb8300bee54832a1398cfa\okio-1.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f824591a0016efbaeddb8300bee54832a1398cfa">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\okio-1.9.0_0070168a8f3e052ac90991ace3ac791899570126.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\416e097611b7856043dfbe0228969094c2fa2f86\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ce22401852bd9e460265a9a1567f7cedb6fc91b9">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1\debug\classes_c2bb3ed978961b8218687275ee585d47e69ad718.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.android\build-cache\fe2aca9d987138197f21e9a97f1c748148bf9a3b\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="746274223beb11b1cda7854d7eec3038695c2c93">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\debug\classes_42ae3d508064169f0acf421f37b71d7b62872e90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Rossie\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.4.1\c7c4f9e35c2fd5900da24f9872e3971801f08ce0\okhttp-3.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7c4f9e35c2fd5900da24f9872e3971801f08ce0">
+        <dex dex="D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\build\intermediates\pre-dexed\F0F1F2\debug\okhttp-3.4.1_ffcfb33858cba04432595da8c898b340063fcb13.jar" />
+    </item>
+
+</items>

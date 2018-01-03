@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\avd_hide_password.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\drawable-v21\\avd_hide_password.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\autocomplete_focusable_bg.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\ae8082099d491286325977b4e6ffdcf9529fe555\\output\\res\\drawable-v21\\autocomplete_focusable_bg.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\design_bottom_navigation_item_background.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\drawable-v21\\design_bottom_navigation_item_background.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\design_password_eye.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\drawable-v21\\design_password_eye.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\abc_edit_text_material.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\drawable-v21\\abc_edit_text_material.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\autocomplete_bg_normal.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\ae8082099d491286325977b4e6ffdcf9529fe555\\output\\res\\drawable-v21\\autocomplete_bg_normal.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\avd_show_password.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\drawable-v21\\avd_show_password.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\pressable_item_background.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\ee5080e72285bf5173833a30572d53141f3bbd3b\\output\\res\\drawable-v21\\pressable_item_background.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\notification_action_background.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\autocomplete_bg_active.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\ae8082099d491286325977b4e6ffdcf9529fe555\\output\\res\\drawable-v21\\autocomplete_bg_active.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1F2F3\\debug\\drawable-v21\\abc_btn_colored_material.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\drawable-v21\\abc_btn_colored_material.xml"
+    }
+]

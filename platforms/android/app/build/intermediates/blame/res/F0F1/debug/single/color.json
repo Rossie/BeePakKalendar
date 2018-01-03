@@ -1,0 +1,94 @@
+[
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_primary_text_material_dark.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_primary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_spinner.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_spinner.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_secondary_text_material_light.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_secondary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_edittext.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_edittext.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\list_editor_text_color.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\416e097611b7856043dfbe0228969094c2fa2f86\\output\\res\\color\\list_editor_text_color.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_btn_colored_borderless_text_material.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_btn_colored_text_material.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\design_tint_password_toggle.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\color\\design_tint_password_toggle.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_hint_foreground_material_dark.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_hint_foreground_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_search_url_text.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_search_url_text.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_primary_text_disable_only_material_light.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_primary_text_disable_only_material_light.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_switch_thumb.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_seek_thumb.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_hint_foreground_material_light.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_hint_foreground_material_light.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\design_error.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\5cf1c9ccc526de430cc86e7f549a7877e7b68d75\\output\\res\\color\\design_error.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_switch_track.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\switch_thumb_material_light.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\switch_thumb_material_light.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_default.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_default.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_tint_btn_checkable.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_secondary_text_material_dark.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_secondary_text_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_primary_text_material_light.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_primary_text_material_light.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\abc_primary_text_disable_only_material_dark.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\abc_primary_text_disable_only_material_dark.xml"
+    },
+    {
+        "merged": "D:\\Rossie\\www\\beepak-calendar\\BeePakKalendar\\platforms\\android\\app\\build\\intermediates\\res\\merged\\F0F1\\debug\\color\\switch_thumb_material_dark.xml",
+        "source": "C:\\Users\\Rossie\\.android\\build-cache\\da99edeb70712b7e7b509c3eb7c0f7126a503e9a\\output\\res\\color\\switch_thumb_material_dark.xml"
+    }
+]

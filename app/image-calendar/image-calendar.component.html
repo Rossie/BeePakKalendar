@@ -1,0 +1,38 @@
+<AbsoluteLayout class="mainLayout">
+    <AbsoluteLayout #calendarImage class="calendarView" (pan)="onCalendarPan($event)" 
+        [left]="calendar_x" [top]="calendar_y">
+        <Image class="croppedImage" #imgCropped stretch="aspectFit"></Image>
+        <app-pan-and-scale>
+            <ns-view-month #viewMonth></ns-view-month>
+        </app-pan-and-scale>
+    </AbsoluteLayout>
+    <DockLayout class="dockLayout" stretchLastChild="false"> 
+        <StackLayout orientation="horizontal" dock="bottom">
+            <Button class="btn btn-primary btn-active" (tap)="viewMonth.stepMonth(-1)">
+                <FormattedString>
+                    <Span text="&#xf068;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text=" HÓNAP"></Span>
+                </FormattedString>                        
+            </Button>
+            <Button class="btn btn-primary btn-active" (tap)="viewMonth.stepMonth(1)">
+                <FormattedString>
+                    <Span text="&#xf067;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text=" HÓNAP"></Span>
+                </FormattedString>                        
+            </Button>
+            <Button class="btn btn-primary btn-active" (tap)="capture()">
+                <FormattedString>
+                        <Span text="&#xf054;" fontFamily="fontawesome-webfont"></Span>
+                        <Span text=" TOVÁBB"></Span>
+                    </FormattedString>                        
+                </Button>
+        </StackLayout>
+    </DockLayout>
+</AbsoluteLayout>
+<ActionBar title="test" android.icon="res://icon" android.iconVisibility="always">
+    <StackLayout orientation="horizontal"
+      ios:horizontalAlignment="center"
+      android:horizontalAlignment="left">
+      <Label text="BeePakKalendar" class="action-bar-title"></Label>
+    </StackLayout>
+</ActionBar>
