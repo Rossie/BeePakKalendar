@@ -467,15 +467,15 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_material = 0x7f020051;
-        public static final int gingerbread_background = 0x7f02006d;
-        public static final int ic_collapse = 0x7f020071;
-        public static final int ic_expand = 0x7f020074;
-        public static final int notification_template_icon_bg = 0x7f02009e;
-        public static final int pressable_item_background = 0x7f020087;
-        public static final int selectable_item_background = 0x7f020088;
-        public static final int shade_bottom = 0x7f020089;
-        public static final int shade_corner = 0x7f02008a;
-        public static final int shade_right = 0x7f02008b;
+        public static final int gingerbread_background = 0x7f02006e;
+        public static final int ic_collapse = 0x7f020072;
+        public static final int ic_expand = 0x7f020075;
+        public static final int notification_template_icon_bg = 0x7f02009f;
+        public static final int pressable_item_background = 0x7f020088;
+        public static final int selectable_item_background = 0x7f020089;
+        public static final int shade_bottom = 0x7f02008a;
+        public static final int shade_corner = 0x7f02008b;
+        public static final int shade_right = 0x7f02008c;
     }
     public static final class id {
         public static final int action0 = 0x7f0d0105;

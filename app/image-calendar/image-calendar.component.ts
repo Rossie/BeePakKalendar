@@ -16,7 +16,7 @@ import { Image } from 'tns-core-modules/ui/image';
 import { AbsoluteLayout } from "ui/layouts/absolute-layout";
 import * as platformModule from "tns-core-modules/platform";
 import * as _ from 'lodash'
-import { Point } from 'tns-core-modules/ui/frame/frame';
+import { Point, View } from 'tns-core-modules/ui/frame/frame';
 import { android } from 'tns-core-modules/application';
 
 @Component({
@@ -26,6 +26,7 @@ import { android } from 'tns-core-modules/application';
   styleUrls: ['./image-calendar.component.scss']
 })
 export class ImageCalendarComponent implements OnInit, AfterViewChecked {
+  private calendarScale: number = 1;
   private screenWidthPx: any;
   private screenHeightPx: any;
   private tap_y: number;
@@ -34,7 +35,6 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
   private calendar_y: number = 0;
   private calendarImageOnScreen:Point;
   private gridScale: number = 1;
-  @ViewChild('viewMonth') viewMonthRef: ElementRef;
   @ViewChild('calendarImage') calendarImageRef: ElementRef;
   @ViewChild('imgCropped') imgCroppedRef: ElementRef;
 
@@ -51,7 +51,6 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    // this.image = this.imageService.croppedFile;
     var img: Image = this.imgCroppedRef.nativeElement;
     if (this.imageService.croppedFileImageSource) {
       img.imageSource = this.imageService.croppedFileImageSource;
@@ -67,16 +66,13 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
 
     this.screenWidthPx = platformModule.screen.mainScreen.widthPixels;
     this.screenHeightPx = platformModule.screen.mainScreen.heightPixels;
-    // this.minLeft = 
 
     let view: AbsoluteLayout = this.calendarImageRef.nativeElement;
     view.width = { value: this.screenWidthPx, unit: "px" };
     view.height = { value: this.screenHeightPx, unit: "px" };
 
-    // _.forIn(android.context, (value, key) => {
-    //   console.log('context:', key, value);
-    // });
-
+    // set calendar to center
+    
   }
 
   ngAfterViewChecked(): void {
@@ -114,9 +110,13 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
     this.router.navigateByUrl('image-result');
   }
 
-  onGridPinch (event: PinchGestureEventData) {
-    console.log('pinch', event.scale, event.state);
-    this.gridScale = event.scale;
+  onSliderValueChange(event){
+    // _.forIn(event, (value, key) => console.log(key,value));
+    this.calendarScale = event.value / 10;
+  }
+
+  onInnerPan(event) {
+    console.log("onInnerPan", event);
   }
 
 }

@@ -497,19 +497,19 @@ public final class R {
         public static final int abc_textfield_search_activated_mtrl_alpha = 0x7f02004f;
         public static final int abc_textfield_search_default_mtrl_alpha = 0x7f020050;
         public static final int abc_textfield_search_material = 0x7f020051;
-        public static final int notification_template_icon_bg = 0x7f02009e;
-        public static final int ucrop_ic_angle = 0x7f020092;
-        public static final int ucrop_ic_crop = 0x7f020093;
-        public static final int ucrop_ic_cross = 0x7f020094;
-        public static final int ucrop_ic_done = 0x7f020095;
-        public static final int ucrop_ic_next = 0x7f020096;
-        public static final int ucrop_ic_reset = 0x7f020097;
-        public static final int ucrop_ic_rotate = 0x7f020098;
-        public static final int ucrop_ic_scale = 0x7f020099;
-        public static final int ucrop_shadow_upside = 0x7f02009a;
-        public static final int ucrop_vector_ic_crop = 0x7f02009b;
-        public static final int ucrop_vector_loader = 0x7f02009c;
-        public static final int ucrop_vector_loader_animated = 0x7f02009d;
+        public static final int notification_template_icon_bg = 0x7f02009f;
+        public static final int ucrop_ic_angle = 0x7f020093;
+        public static final int ucrop_ic_crop = 0x7f020094;
+        public static final int ucrop_ic_cross = 0x7f020095;
+        public static final int ucrop_ic_done = 0x7f020096;
+        public static final int ucrop_ic_next = 0x7f020097;
+        public static final int ucrop_ic_reset = 0x7f020098;
+        public static final int ucrop_ic_rotate = 0x7f020099;
+        public static final int ucrop_ic_scale = 0x7f02009a;
+        public static final int ucrop_shadow_upside = 0x7f02009b;
+        public static final int ucrop_vector_ic_crop = 0x7f02009c;
+        public static final int ucrop_vector_loader = 0x7f02009d;
+        public static final int ucrop_vector_loader_animated = 0x7f02009e;
     }
     public static final class id {
         public static final int action0 = 0x7f0d0105;

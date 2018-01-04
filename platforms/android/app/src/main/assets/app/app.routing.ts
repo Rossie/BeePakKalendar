@@ -8,8 +8,8 @@ import { ImageCalendarComponent } from "./image-calendar/image-calendar.componen
 import { ImageResultComponent } from "./image-result/image-result.component";
 
 const routes: Routes = [
-    // { path: "", redirectTo: "/image-select", pathMatch: "full" },
-    { path: "", redirectTo: "/image-calendar", pathMatch: "full" }, // test case
+    { path: "", redirectTo: "/image-select", pathMatch: "full" },
+    // { path: "", redirectTo: "/image-calendar", pathMatch: "full" }, // test case
     { path: "image-select", component: ImageSelectComponent },
     { path: "image-crop", component: ImageCropComponent },
     { path: "image-calendar", component: ImageCalendarComponent },

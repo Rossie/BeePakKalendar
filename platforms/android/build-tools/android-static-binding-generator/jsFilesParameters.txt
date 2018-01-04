@@ -11,6 +11,8 @@ D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\asse
 D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\image-crop\image-crop.component.js
 D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\image-result\image-result.component.js
 D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\image-select\image-select.component.js
+D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\message-win\message-win.component.js
+D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\pan-and-scale\pan-and-scale.component.js
 D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\common.js
 D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\dom-adapter.js
 D:\Rossie\www\beepak-calendar\BeePakKalendar\platforms\android\app\src\main\assets\app\tns_modules\nativescript-angular\element-registry.js

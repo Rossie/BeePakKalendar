@@ -7,6 +7,7 @@ import * as _ from 'lodash';
 import * as Toast from 'nativescript-toast';
 import { exit } from 'nativescript-exit';
 import { SettingsService } from '../settings.service';
+import * as SocialShare from "nativescript-social-share";
 
 @Component({
     moduleId: module.id,
@@ -50,7 +51,7 @@ export class ImageResultComponent implements OnInit {
     }
 
     share() {
-
+        SocialShare.shareImage(this.imageService.getCalendarSource());
     }
 
     exit() {

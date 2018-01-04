@@ -1,3 +1,15 @@
-<AbsoluteLayout>
-    <ng-content></ng-content>
+<AbsoluteLayout [left]="left" [top]="top" [scaleX]="scale" [scaleY]="scale" (pan)="onPan($event)">
+  <GridLayout class="toolsGrid" rows="*,auto,*" columns="*,auto,*">
+    <!-- <Label row="0" col="0" text="Sc" (pan)="onScalePan($event, 1)"></Label>
+    <Label row="2" col="2" text="Sc" (pan)="onScalePan($event, 2)"></Label>
+    <Label row="2" col="0" text="Sc" (pan)="onScalePan($event, 3)"></Label>
+    <Label row="0" col="2" text="Sc" (pan)="onScalePan($event, 4)"></Label> -->
+    <!-- <Label class="pan" row="0" col="1" text="&#xf047;" (pan)="onPan($event)"></Label>
+    <Label class="pan" row="1" col="0" text="&#xf047;" (pan)="onPan($event)"></Label>
+    <Label class="pan" row="1" col="2" text="&#xf047;" (pan)="onPan($event)"></Label>
+    <Label class="pan" row="2" col="1" text="&#xf047;" (pan)="onPan($event)"></Label> -->
+    <AbsoluteLayout row="1" col="1">
+      <ng-content></ng-content>
+    </AbsoluteLayout>
+  </GridLayout>
 </AbsoluteLayout>

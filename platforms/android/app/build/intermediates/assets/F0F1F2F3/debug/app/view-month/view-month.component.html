@@ -1,6 +1,5 @@
-<GridLayout #calendarGrid (pan)="onPan($event)" (touch)="onTouch($event)" class="calendar-grid"
-    columns="*,*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*" 
-    width="200" height="220" [left]="calendar_x" [top]="calendar_y">
+<GridLayout class="calendar-grid"
+    columns="*,*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*" >
     <Label class="month-name" text="{{monthName | uppercase}}" row="0" col="0" colSpan="7"></Label>
 
     <Label text="H"  row="1" col="0"></Label>

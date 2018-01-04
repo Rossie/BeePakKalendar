@@ -4,7 +4,7 @@ import { PageRoute } from 'nativescript-angular/router/page-router-outlet';
 import { ActivatedRoute } from '@angular/router/src/router_state';
 import { UrlSegment } from '@angular/router/src/url_tree';
 import { RouterExtensions } from 'nativescript-angular/router/router-extensions';
-import { PanGestureEventData, TouchGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
+import { PanGestureEventData, TouchGestureEventData, PinchGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
 import { CalendarService } from '../calendar.service';
 import { Input } from '@angular/core/src/metadata/directives';
 import { GridLayout, ItemSpec } from "ui/layouts/grid-layout";
@@ -16,7 +16,7 @@ import { Image } from 'tns-core-modules/ui/image';
 import { AbsoluteLayout } from "ui/layouts/absolute-layout";
 import * as platformModule from "tns-core-modules/platform";
 import * as _ from 'lodash'
-import { Point } from 'tns-core-modules/ui/frame/frame';
+import { Point, View } from 'tns-core-modules/ui/frame/frame';
 import { android } from 'tns-core-modules/application';
 
 @Component({
@@ -26,6 +26,7 @@ import { android } from 'tns-core-modules/application';
   styleUrls: ['./image-calendar.component.scss']
 })
 export class ImageCalendarComponent implements OnInit, AfterViewChecked {
+  private calendarScale: number = 1;
   private screenWidthPx: any;
   private screenHeightPx: any;
   private tap_y: number;
@@ -33,7 +34,7 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
   private calendar_x: number = 0;
   private calendar_y: number = 0;
   private calendarImageOnScreen:Point;
-  @ViewChild('viewMonth') viewMonthRef: ElementRef;
+  private gridScale: number = 1;
   @ViewChild('calendarImage') calendarImageRef: ElementRef;
   @ViewChild('imgCropped') imgCroppedRef: ElementRef;
 
@@ -50,7 +51,6 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    // this.image = this.imageService.croppedFile;
     var img: Image = this.imgCroppedRef.nativeElement;
     if (this.imageService.croppedFileImageSource) {
       img.imageSource = this.imageService.croppedFileImageSource;
@@ -66,16 +66,13 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
 
     this.screenWidthPx = platformModule.screen.mainScreen.widthPixels;
     this.screenHeightPx = platformModule.screen.mainScreen.heightPixels;
-    // this.minLeft = 
 
     let view: AbsoluteLayout = this.calendarImageRef.nativeElement;
     view.width = { value: this.screenWidthPx, unit: "px" };
     view.height = { value: this.screenHeightPx, unit: "px" };
 
-    // _.forIn(android.context, (value, key) => {
-    //   console.log('context:', key, value);
-    // });
-
+    // set calendar to center
+    
   }
 
   ngAfterViewChecked(): void {
@@ -113,5 +110,13 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
     this.router.navigateByUrl('image-result');
   }
 
-  
+  onSliderValueChange(event){
+    // _.forIn(event, (value, key) => console.log(key,value));
+    this.calendarScale = event.value / 10;
+  }
+
+  onInnerPan(event) {
+    console.log("onInnerPan", event);
+  }
+
 }
