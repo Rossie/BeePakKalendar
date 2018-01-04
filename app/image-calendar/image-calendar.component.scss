@@ -1,5 +1,5 @@
 .mainLayout,
-.calendarView,
+// .calendarView,
 .croppedImage,
 .mainLayout > .tools-layout {
     width: 100%;
@@ -13,6 +13,19 @@
 
 .dockLayout Button {
     padding: 2;
+}
+
+.logo {
+    opacity: 0.5;
+    Label {
+        font-family: 'ArimaMadurai-Bold';
+        vertical-align: center;
+        color: #ffcc00;
+    }
+    Image {
+        width: 50;
+        height: 50;
+    }
 }
 
 .slider-layout {

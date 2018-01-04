@@ -1,11 +1,20 @@
 <AbsoluteLayout class="mainLayout">
-    <AbsoluteLayout #calendarImage class="calendarView" (pan)="onCalendarPan($event)" 
-        [left]="calendar_x" [top]="calendar_y">
-        <Image class="croppedImage" #imgCropped stretch="aspectFit"></Image>
+    
+    <AbsoluteLayout #calendarImage class="calendarView" (pan)="onCalendarPan($event)" [left]="calendar_x" [top]="calendar_y">
+
+        <Image class="croppedImage" [imageSource]="imageCropped" stretch="aspectFit"></Image>
+
+        <StackLayout class="logo" orientation="horizontal" verticalAlignment="bottom" horizontalAlignment="right">
+            <Image src="res://icon"></Image>
+            <Label text="BeePakKalendar"></Label>
+        </StackLayout>
+        
         <app-pan-and-scale [scale]="calendarScale" #pancomponent>
             <ns-view-month (innerPan)="pancomponent.onPan($event)"></ns-view-month>
         </app-pan-and-scale>
+
     </AbsoluteLayout>
+
     <StackLayout class="tools-layout" orientation="vertical" verticalAlignment="bottom">
         <GridLayout class="slider-layout" height="30" rows="*" columns="auto,*,auto">
             <Label col="0" text="&#xf010;"></Label>

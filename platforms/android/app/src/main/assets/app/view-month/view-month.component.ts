@@ -53,7 +53,6 @@ export class ViewMonthComponent implements OnInit {
         .then((result:IDayMarker) => {
             day.marker = result;
         });
-        console.log('view-month.component tap');        
     }    
 
     onDayPan($event) {

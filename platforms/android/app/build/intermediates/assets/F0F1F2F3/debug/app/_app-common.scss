@@ -4,14 +4,35 @@
 @import '~nativescript-theme-core/scss/light';
 
 // Customize any of the theme’s variables here, for instance $btn-color: red;
+$beepakk: #ffcc00 !default;
+// $beepakkMenta: #75FF91 !default;
+$beepakkMenta: #81c14b !default;
+// $beepakkMenta: #9AFFAF !default;
+$btn-color: $beepakkMenta;
+$btn-color-inverse: $black;
 
 // Import the theme’s main ruleset.
 @import '~nativescript-theme-core/scss/index';
 
-$beepakk: #ffcc00 !default;
-$btn-color: $beepakk;
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
+
+.action-bar-title {
+    font-size: 18;
+    font-family: "ArimaMadurai-Bold";
+}
+
+.marker-color-1 {
+    color: #edc387;
+}
+
+.marker-color-2 {
+    color: #7b160e;
+}
+
+.marker-color-3 {
+    color: #8e8737;
+}
 
 /* 
 // BeePakKalendar\platforms\android\app\src\main\assets\app\tns_modules\nativescript-theme-core\scss\_variables.scss

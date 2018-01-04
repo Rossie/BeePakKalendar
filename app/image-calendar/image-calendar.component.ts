@@ -35,8 +35,9 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
   private calendar_y: number = 0;
   private calendarImageOnScreen:Point;
   private gridScale: number = 1;
+  private imageCropped: ImageSource;
+
   @ViewChild('calendarImage') calendarImageRef: ElementRef;
-  @ViewChild('imgCropped') imgCroppedRef: ElementRef;
 
   constructor(
     private imageService: ImageService,
@@ -51,13 +52,12 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
   }
 
   ngOnInit() {
-    var img: Image = this.imgCroppedRef.nativeElement;
     if (this.imageService.croppedFileImageSource) {
-      img.imageSource = this.imageService.croppedFileImageSource;
+      this.imageCropped = this.imageService.croppedFileImageSource;
     }
     else {
       this.imageService.getLastImageSource()
-        .then(lastImageSource => img.imageSource = lastImageSource)
+        .then(lastImageSource => this.imageCropped = lastImageSource)
         .catch(error => {
           console.error('No last file found.');
           this.router.navigateByUrl('image-select');
