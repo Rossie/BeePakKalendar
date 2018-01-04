@@ -14,7 +14,7 @@ import { ImageResultComponent } from "./image-result/image-result.component";
 import { DayMarkerComponent } from "./day-marker/day-marker.component";
 import { SettingsService } from "./settings.service";
 import { PanAndScaleComponent } from "./pan-and-scale/pan-and-scale.component";
-import { MessageWinComponent } from "app/message-win/message-win.component";
+import { MessageWinComponent } from "./message-win/message-win.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
