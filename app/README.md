@@ -1,25 +1,46 @@
-# NativeScript Angular Template
+# Important informations
 
-This template creates a "Hello, world" NativeScript app using TypeScript and Angular.
-
-You can create a new app that uses this template with either the `--template` option.
-
+NATIVESCRIPT-ANGULAR-CLI - https://www.npmjs.com/package/nativescript-angular-cli
 ```
-tns create my-app-name --template tns-template-hello-world-ng
-```
-
-Or the `--ng` shorthand.
-
-```
-tns create my-app-name --ng
+tns generate component <component-name>
+tns g c <component-name>
+tns generate module <module-name>
+tns g m <module-name>
+tns generate service <service-name>
+tns g s <service-name>
+tns generate shared-module <module-name>
+tns g sm <module-name>
 ```
 
-> Note: Both commands will create a new NativeScript app that uses the latest version of this template published to [npm] (https://www.npmjs.com/package/tns-template-hello-world-ng).
-
-If you want to create a new app that uses the source of the template from the `master` branch, you can execute the following:
-
+TNS-NG - https://www.npmjs.com/package/tns-ng
 ```
-tns create my-app-name --template https://github.com/NativeScript/template-hello-world-ng.git#master
+	Component	tng g component my-component
+	Service		tng g service my-service
 ```
 
-**NB:** Please, have in mind that the master branch may refer to dependencies that are not on NPM yet!
+https://developer.android.com/studio/run/emulator-commandline.html	
+```
+	emulator -list-avds
+	emulator -avd avd_name
+	emulator @avd_name
+
+	emulator -avd Galaxy_Nexus_API_25
+```
+	
+https://play.google.com/apps/publish/?account=7776469193716073940#AppListPlace
+
+Declaring Tablet Layouts for Android 3.2
+	https://developer.android.com/guide/practices/screens_support.html#DeclaringTabletLayouts
+	
+	https://developer.telerik.com/featured/demystifying-nativescript-layouts/
+	
+	https://docs.nativescript.org/ui/styling#supported-css-properties
+	
+	
+```
+System.err: Calling js method onCreateView failed
+System.err:
+System.err: TypeError: Cannot read property 'unit' of undefined
+System.err: File: "file:///data/data/org.nativescript.BeePakKalendar/files/app/tns_modules/tns-core-modules/ui/core/view/view.js, line: 539, column: 27
+```
+>A html view-ben változó kötés van [] de a componensben még nincs inicializálva (undefined) az osztály deklarációjában.

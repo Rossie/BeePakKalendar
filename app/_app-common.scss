@@ -28,16 +28,20 @@ $btn-color-inverse: $black;
     font-family: "ArimaMadurai-Bold";
 }
 
+$marker-color-1: #edc387;
+$marker-color-2: #7b160e;
+$marker-color-3: #8e8737;
+
 .marker-color-1 {
-    color: #edc387;
+    color: $marker-color-1;
 }
 
 .marker-color-2 {
-    color: #7b160e;
+    color: $marker-color-2;
 }
 
 .marker-color-3 {
-    color: #8e8737;
+    color: $marker-color-3;
 }
 
 .icon-font {
