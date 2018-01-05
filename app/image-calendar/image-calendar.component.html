@@ -10,33 +10,33 @@
         </StackLayout>
         
         <app-pan-and-scale [scale]="calendarScale" #pancomponent>
-            <ns-view-month (innerPan)="pancomponent.onPan($event)"></ns-view-month>
+            <ns-view-month #viewMonth (innerPan)="pancomponent.onPan($event)"></ns-view-month>
         </app-pan-and-scale>
 
     </AbsoluteLayout>
 
     <StackLayout class="tools-layout" orientation="vertical" verticalAlignment="bottom">
-        <GridLayout class="slider-layout" height="30" rows="*" columns="auto,*,auto">
-            <Label col="0" text="&#xf010;"></Label>
-            <Slider col="1" value="10" (valueChange)="onSliderValueChange($event)" minValue="5" maxValue="20"></Slider>
-            <Label col="2" text="&#xf00e;"></Label>
+        <GridLayout class="slider-layout" height="36" rows="*" columns="auto,*,auto">
+            <Label col="0" class="icon-font" text="&#xf010;"></Label>
+            <Slider col="1" class="slider" value="10" (valueChange)="onSliderValueChange($event)" minValue="5" maxValue="20"></Slider>
+            <Label col="2" class="icon-font" text="&#xf00e;"></Label>
         </GridLayout>
         <GridLayout rows="60" columns="*,*,*">
-            <Button col="0" class="btn btn-primary btn-active" (tap)="viewMonth.stepMonth(-1)">
+            <Button col="0" class="btn btn-primary" (tap)="viewMonth.stepMonth(-1)">
                 <FormattedString>
-                    <Span text="&#xf068;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text="&#xf068;" class="icon-font"></Span>
                     <Span text=" HÓNAP"></Span>
                 </FormattedString>                        
             </Button>
-            <Button col="1" class="btn btn-primary btn-active" (tap)="viewMonth.stepMonth(1)">
+            <Button col="1" class="btn btn-primary" (tap)="viewMonth.stepMonth(1)">
                 <FormattedString>
-                    <Span text="&#xf067;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text="&#xf067;" class="icon-font"></Span>
                     <Span text=" HÓNAP"></Span>
                 </FormattedString>                        
             </Button>
-            <Button col="2" class="btn btn-primary btn-active" (tap)="capture()">
+            <Button col="2" class="btn btn-primary" (tap)="capture()">
                 <FormattedString>
-                    <Span text="&#xf054;" fontFamily="fontawesome-webfont"></Span>
+                    <Span text="&#xf054;" class="icon-font"></Span>
                     <Span text=" TOVÁBB"></Span>
                 </FormattedString>                        
             </Button>

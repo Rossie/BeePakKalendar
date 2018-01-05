@@ -3,14 +3,8 @@
 // for example '~nativescript-theme-core/scss/dark'.
 @import '~nativescript-theme-core/scss/light';
 
+@import 'app-variables';
 // Customize any of the theme’s variables here, for instance $btn-color: red;
-$beepakk: #ffcc00 !default;
-// $beepakkMenta: #75FF91 !default;
-$beepakkMenta: #81c14b !default;
-// $beepakkMenta: #9AFFAF !default;
-// $btn-color: $beepakkMenta;
-// $btn-color-inverse: $black; // text color
-// $accent: $beepakkMenta;
   
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
@@ -33,7 +27,11 @@ $beepakkMenta: #81c14b !default;
 }
 
 .icon-font {
-    font-family: 'fontawesome-webfont';
+    font-family: $iconFont;
+}
+
+.upcase {
+    text-transform: uppercase;
 }
 
 // nativescript-theme-core\scss\_variables.scss

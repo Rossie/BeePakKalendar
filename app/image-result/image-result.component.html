@@ -2,25 +2,26 @@
     <Image class="resultImage" #imgResult stretch="aspectFit"></Image>
     <DockLayout class="dockLayout" stretchLastChild="false"> 
         <StackLayout orientation="vertical" dock="bottom">
-            <Button class="btn btn-primary btn-active" (tap)="setWallpaper()">
+            <Button class="btn btn-primary" (tap)="setWallpaper()">
                 <FormattedString>
-                    <Span text="&#xf03e;" fontFamily="fontawesome-webfont"></Span>
-                    <Span text=" Háttérképnek"></Span>
+                    <Span text="&#xf03e;" class="icon-font"></Span>
+                    <Span text=" HÁTTÉRKÉPNEK"></Span>
                 </FormattedString>
             </Button>
-            <!-- <Button class="btn btn-primary btn-active" text="Mentés képekhez" (tap)="saveToFile()"></Button> -->
-            <Button class="btn btn-primary btn-active" (tap)="share()">
+            <!-- <Button class="btn btn-primary" text="Mentés képekhez" (tap)="saveToFile()"></Button> -->
+            <Button class="btn btn-primary" (tap)="share()">
                 <FormattedString>
-                    <Span text="&#xf1e0;" fontFamily="fontawesome-webfont"></Span>
-                    <Span text=" Megosztás"></Span>
+                    <Span text="&#xf1e0;" class="icon-font"></Span>
+                    <Span text=" MEGOSZTÁS"></Span>
                 </FormattedString>        
             </Button>
-            <Button class="btn btn-primary btn-active" (tap)="exit()">
+            <Button class="btn btn-primary" (tap)="exit()">
                 <FormattedString>
-                    <Span text="&#xf08b;" fontFamily="fontawesome-webfont"></Span>
-                    <Span text=" Kilép"></Span>
+                    <Span text="&#xf08b;" class="icon-font"></Span>
+                    <Span text=" KILÉP"></Span>
                 </FormattedString>                
             </Button>
+
         </StackLayout>
     </DockLayout>
 </AbsoluteLayout>
