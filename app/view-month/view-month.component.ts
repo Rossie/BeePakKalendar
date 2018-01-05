@@ -15,7 +15,7 @@ import * as _ from 'lodash';
     moduleId: module.id,
     selector: 'ns-view-month',
     templateUrl: './view-month.component.html',
-    styleUrls: ['./view-month.component.css']
+    styleUrls: ['./view-month.component.scss']
 })
 export class ViewMonthComponent implements OnInit {
     private monthName:string;

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./closeable.component.scss']
 })
 export class CloseableComponent implements OnInit {
+  
+  private closed:boolean = false;
 
   constructor() { }
 

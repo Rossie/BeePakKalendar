@@ -1,7 +1,6 @@
 <AbsoluteLayout class="mainLayout">
     
     <AbsoluteLayout #calendarImage class="calendarView" (pan)="onCalendarPan($event)" [left]="calendar_x" [top]="calendar_y">
-
         <Image class="croppedImage" [imageSource]="imageCropped" stretch="aspectFit"></Image>
 
         <StackLayout class="logo" orientation="horizontal" verticalAlignment="bottom" horizontalAlignment="right">
@@ -12,7 +11,6 @@
         <app-pan-and-scale [scale]="calendarScale" #pancomponent>
             <ns-view-month #viewMonth (innerPan)="pancomponent.onPan($event)"></ns-view-month>
         </app-pan-and-scale>
-
     </AbsoluteLayout>
 
     <StackLayout class="tools-layout" orientation="vertical" verticalAlignment="bottom">
@@ -42,7 +40,13 @@
             </Button>
         </GridLayout>
     </StackLayout>
+
 </AbsoluteLayout>
+
+<app-closeable>
+    <app-message-win message="&#x2665; Bökj a fontos dátumokra, jelöld őket tetszés szerint.&#x000a;&#x2665; Helyez el a naptárat a képen, ahol tetszik."></app-message-win>
+</app-closeable>
+
 <ActionBar title="test" android.icon="res://icon" android.iconVisibility="always">
     <StackLayout orientation="horizontal"
       ios:horizontalAlignment="center"

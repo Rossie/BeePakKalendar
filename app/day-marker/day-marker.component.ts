@@ -7,7 +7,7 @@ import { IDayMarker, markers } from '../calendar.service';
     moduleId: module.id,
     selector: 'ns-day-marker',
     templateUrl: './day-marker.component.html',
-    styleUrls: ['./day-marker.component.css']
+    styleUrls: ['./day-marker.component.scss']
 })
 export class DayMarkerComponent implements OnInit {
 
