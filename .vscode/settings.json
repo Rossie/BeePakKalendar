@@ -5,6 +5,8 @@
         "**/.hg": true,
         "**/CVS": true,
         "**/.DS_Store": true,
-        "**/*.js": { "when": "$(basename).ts" }
-    }
+        "**/*.js": { "when": "$(basename).ts" },
+        "**/*.css": { "when": "$(basename).scss" }
+    },
+    "git.ignoreLimitWarning": true
 }
