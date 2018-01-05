@@ -15,6 +15,7 @@ import { DayMarkerComponent } from "./day-marker/day-marker.component";
 import { SettingsService } from "./settings.service";
 import { PanAndScaleComponent } from "./pan-and-scale/pan-and-scale.component";
 import { MessageWinComponent } from "./message-win/message-win.component";
+import { CloseableComponent } from "./closeable/closeable.component";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -40,6 +41,7 @@ import { MessageWinComponent } from "./message-win/message-win.component";
         DayMarkerComponent,
         PanAndScaleComponent,
         MessageWinComponent,
+        CloseableComponent
     ],
     entryComponents: [
         DayMarkerComponent        
