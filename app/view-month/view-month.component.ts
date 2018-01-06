@@ -18,9 +18,9 @@ import * as _ from 'lodash';
     styleUrls: ['./view-month.component.scss']
 })
 export class ViewMonthComponent implements OnInit {
-    private monthName:string;
-    private actMonth: moment.Moment;
-    private days:IDayItem[] = [];
+    public monthName:string;
+    public actMonth: moment.Moment;
+    public days:IDayItem[] = [];
 
     // event bradcaster to outer component: image-calendar.component
     @Output('innerPan') innerPan: EventEmitter<PanGestureEventData> = new EventEmitter();

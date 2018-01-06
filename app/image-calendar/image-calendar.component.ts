@@ -26,16 +26,16 @@ import { android } from 'tns-core-modules/application';
   styleUrls: ['./image-calendar.component.scss']
 })
 export class ImageCalendarComponent implements OnInit, AfterViewChecked {
-  private calendarScale: number = 1;
+  public calendarScale: number = 1;
   private screenWidthPx: any;
   private screenHeightPx: any;
   private tap_y: number;
   private tap_x: number;
-  private calendar_x: number = 0;
-  private calendar_y: number = 0;
+  public calendar_x: number = 0;
+  public calendar_y: number = 0;
   private calendarImageOnScreen:Point;
   private gridScale: number = 1;
-  private imageCropped: ImageSource;
+  public imageCropped: ImageSource;
 
   @ViewChild('calendarImage') calendarImageRef: ElementRef;
 

@@ -11,7 +11,7 @@ import { IDayMarker, markers } from '../calendar.service';
 })
 export class DayMarkerComponent implements OnInit {
 
-    private markers = markers;
+    public markers = markers;
     private colNum: number = 3;
 
     constructor(

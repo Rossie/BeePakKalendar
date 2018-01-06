@@ -21,7 +21,6 @@ export class ImageCropComponent implements OnInit {
 
     @ViewChild('scrollView') scrollView: ElementRef
 
-    private isLoading = true
     private imageCropper: ImageCropper = new ImageCropper();
 
     constructor(
@@ -39,9 +38,7 @@ export class ImageCropComponent implements OnInit {
     ngOnInit() { 
     }
 
-    cropImage(){
-        this.isLoading = true;
-        
+    cropImage(){        
         const imgSrc = this.imageService.getSelectedSource();
         const options:OptionsCommon = {
             width: platformModule.screen.mainScreen.widthPixels,
@@ -49,13 +46,11 @@ export class ImageCropComponent implements OnInit {
         };
         this.imageCropper.show(imgSrc, options)
         .then(result => {
-            this.isLoading = false;
             this.imageService.saveCroppedFile(result.image);
             this.router.navigateByUrl('image-calendar');
         })
         .catch(error => {
             console.error('Image Cropper Error:');
-            this.isLoading = false;
             this.router.navigateByUrl('image-select');
         });
     }

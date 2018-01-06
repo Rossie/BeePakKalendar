@@ -12,8 +12,8 @@ import { AfterViewInit } from '@angular/core/src/metadata/lifecycle_hooks';
   styleUrls: ['./pan-and-scale.component.scss']
 })
 export class PanAndScaleComponent implements OnInit {
-  private left:number = 0;
-  private top:number = 0;
+  public left:number = 0;
+  public top:number = 0;
   private tap_x:number = 0;
   private tap_y:number = 0;
   private startScale:number = 1;

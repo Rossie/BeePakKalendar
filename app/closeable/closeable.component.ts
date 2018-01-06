@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CloseableComponent implements OnInit {
   
-  private closed:boolean = false;
+  public closed:boolean = false;
 
   constructor() { }
 
