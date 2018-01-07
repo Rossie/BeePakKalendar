@@ -13,7 +13,7 @@ import * as SocialShare from "nativescript-social-share";
     moduleId: module.id,
     selector: 'ns-image-result',
     templateUrl: './image-result.component.html',
-    styleUrls: ['./image-result.component.css']
+    styleUrls: ['./image-result.component.scss']
 })
 export class ImageResultComponent implements OnInit {
 
@@ -40,14 +40,14 @@ export class ImageResultComponent implements OnInit {
             Toast.makeText('Háttérkép beállítva.', 'long').show();
         }
         else
-            console.error('setWallpaper: Not implemented for IOS.')
+            console.error('setWallpaper: Not implemented for IOS.');
     }
     
     saveToFile() {
-        // let folderPath = android.context.getExternalStoragePublicDirectory(android.context.Environment.DIRECTORY_PICTURES);
-        // console.dir(img.android);
-        console.dir(android.context.getExternalStoragePublicDirectory());
-        Toast.makeText('Kép elmentve.', 'long').show();     
+        let file = (new Date()).getTime() + '.png';
+        file = this.imageService.getImagePath(file);
+        this.imageService.getCalendarSource().saveToFile(file, "png");
+        Toast.makeText('Kép elmentve.', 'long').show();
     }
 
     share() {

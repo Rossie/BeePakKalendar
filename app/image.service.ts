@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
+import * as application from "application";
 import * as fs from "file-system";
 import * as _ from "lodash";
 import * as utils from "utils/utils";
 import { Page } from 'tns-core-modules/ui/frame/frame';
+import * as fileSystem from "file-system";
 
 @Injectable()
 export class ImageService {
@@ -11,7 +13,7 @@ export class ImageService {
     public selectedFileImageSource: ImageSource;
     public croppedFile: string;
     public croppedFileImageSource: ImageSource;
-    public calendarFile: string;
+    // public calendarFile: string;
     public calendarImageSource: ImageSource;
 
     constructor(
@@ -73,4 +75,18 @@ export class ImageService {
         });
     }
 
+    getImagePath(img:string):string {
+        // https://github.com/NickIliev/NativeScript-Cosmos-Databank/blob/master/app/views/helpers/files/file-helpers.ts
+        var path;
+        if (application.android) {
+            var androidDownloadsPath = android.os.Environment.getExternalStoragePublicDirectory(
+                android.os.Environment.DIRECTORY_PICTURES).toString();
+            path = fileSystem.path.join(androidDownloadsPath, img);
+        } else if (application.ios) {
+            // TODO :  this works - but where are the images ?
+            var iosDownloadPath = fileSystem.knownFolders.documents();
+            path = fileSystem.path.join(iosDownloadPath.path, img);
+        }  
+        return path;
+    }    
 }

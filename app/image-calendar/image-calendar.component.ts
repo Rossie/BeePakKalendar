@@ -4,20 +4,14 @@ import { PageRoute } from 'nativescript-angular/router/page-router-outlet';
 import { ActivatedRoute } from '@angular/router/src/router_state';
 import { UrlSegment } from '@angular/router/src/url_tree';
 import { RouterExtensions } from 'nativescript-angular/router/router-extensions';
-import { PanGestureEventData, TouchGestureEventData, PinchGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
+import { PanGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
 import { CalendarService } from '../calendar.service';
-import { Input } from '@angular/core/src/metadata/directives';
-import { GridLayout, ItemSpec } from "ui/layouts/grid-layout";
-import { Label } from "ui/label";
-import { ViewMonthComponent } from '../view-month/view-month.component';
 import * as screenShot from 'nativescript-screenshot';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
-import { Image } from 'tns-core-modules/ui/image';
 import { AbsoluteLayout } from "ui/layouts/absolute-layout";
 import * as platformModule from "tns-core-modules/platform";
 import * as _ from 'lodash'
-import { Point, View } from 'tns-core-modules/ui/frame/frame';
-import { android } from 'tns-core-modules/application';
+import { Point } from 'tns-core-modules/ui/frame/frame';
 
 @Component({
   moduleId: module.id,
@@ -70,9 +64,6 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
     let view: AbsoluteLayout = this.calendarImageRef.nativeElement;
     view.width = { value: this.screenWidthPx, unit: "px" };
     view.height = { value: this.screenHeightPx, unit: "px" };
-
-    // set calendar to center
-    
   }
 
   ngAfterViewChecked(): void {
