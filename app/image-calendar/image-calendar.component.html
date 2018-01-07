@@ -19,8 +19,8 @@
             <Slider col="1" class="slider" value="10" (valueChange)="onSliderValueChange($event)" minValue="5" maxValue="20"></Slider>
             <Label col="2" class="icon-font" text="&#xf00e;"></Label>
         </GridLayout>
-        <GridLayout rows="60" columns="*,*,*">
-            <Button col="0" class="btn btn-primary" (tap)="viewMonth.stepMonth(-1)">
+        <GridLayout rows="60" columns="*,auto">
+            <!-- <Button col="0" class="btn btn-primary" (tap)="viewMonth.stepMonth(-1)">
                 <FormattedString>
                     <Span text="&#xf068;" class="icon-font"></Span>
                     <Span text=" HÓNAP"></Span>
@@ -31,8 +31,8 @@
                     <Span text="&#xf067;" class="icon-font"></Span>
                     <Span text=" HÓNAP"></Span>
                 </FormattedString>                        
-            </Button>
-            <Button col="2" class="btn btn-primary" (tap)="capture()">
+            </Button> -->
+            <Button col="1" class="btn btn-primary" (tap)="capture()">
                 <FormattedString>
                     <Span text="&#xf054;" class="icon-font"></Span>
                     <Span text=" TOVÁBB"></Span>
