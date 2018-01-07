@@ -15,7 +15,7 @@ import { ImageSource } from 'tns-core-modules/image-source/image-source';
     moduleId: module.id,
     selector: 'ns-image-crop',
     templateUrl: './image-crop.component.html',
-    styleUrls: ['./image-crop.component.css']
+    styleUrls: ['./image-crop.component.scss']
 })
 export class ImageCropComponent implements OnInit {
 

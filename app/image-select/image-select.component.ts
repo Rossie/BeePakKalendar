@@ -19,7 +19,7 @@ import { android } from 'tns-core-modules/application/application';
     moduleId: module.id,
     selector: 'ns-image-select',
     templateUrl: './image-select.component.html',
-    styleUrls: ['./image-select.component.css']
+    styleUrls: ['./image-select.component.scss']
 })
 export class ImageSelectComponent implements OnInit {
     @ViewChild('scrollView') scrollView: ElementRef
