@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core'
 import { ModalDialogParams } from "nativescript-angular/modal-dialog";
-import { IDayMarker, markers } from '../calendar.service';
+import { IDayMarker, markers } from '../services/calendar.service';
 
 
 @Component({

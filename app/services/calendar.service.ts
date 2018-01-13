@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
+import { SettingsService } from '../services/settings.service'
 
 @Injectable()
 export class CalendarService {
@@ -7,7 +8,9 @@ export class CalendarService {
     private locale = 'hu';
     private monthOffset: number = 0;
 
-    constructor() {
+    constructor(
+        private settingsService: SettingsService
+    ) {
         moment.locale(this.locale);
     }
 

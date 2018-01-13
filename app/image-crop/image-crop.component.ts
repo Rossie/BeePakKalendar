@@ -8,7 +8,7 @@ import * as platformModule from "tns-core-modules/platform";
 import { ImageCropper } from "nativescript-imagecropper"; // https://github.com/bthurlow/nativescript-imagecropper
 import { OptionsCommon, Result } from 'nativescript-imagecropper/interfaces';
 // Own libraries
-import { ImageService } from '../image.service';
+import { ImageService } from '../services/image.service';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
 
 @Component({

@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core'
 import { RouterExtensions } from 'nativescript-angular/router'
 import { Image } from 'tns-core-modules/ui/image/image';
-import { ImageService } from '../image.service';
+import { ImageService } from '../services/image.service';
 import { android } from 'tns-core-modules/application/application';
 import * as _ from 'lodash';
 import * as Toast from 'nativescript-toast';
 import { exit } from 'nativescript-exit';
-import { SettingsService } from '../settings.service';
+import { SettingsService } from '../services/settings.service';
 import * as SocialShare from "nativescript-social-share";
 
 @Component({

@@ -7,10 +7,10 @@ import "rxjs/add/operator/switchMap";
 // 3rd pary libraries
 import * as imagepicker from "nativescript-imagepicker"; // https://github.com/NativeScript/nativescript-imagepicker
 // Own libraries
-import { ImageService } from '../image.service';
+import { ImageService } from '../services/image.service';
 import { ActivatedRoute } from '@angular/router/src/router_state';
 import { UrlSegment } from '@angular/router/src/url_tree';
-import { CalendarService } from '../calendar.service';
+import { CalendarService } from '../services/calendar.service';
 import { GridLayout } from "ui/layouts/grid-layout";
 import { Label } from "ui/label";
 import { android } from 'tns-core-modules/application/application';

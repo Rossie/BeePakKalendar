@@ -1,11 +1,11 @@
 import { Component, OnInit, ElementRef, AfterViewInit, ViewChild, AfterViewChecked } from '@angular/core';
-import { ImageService } from '../image.service';
+import { ImageService } from '../services/image.service';
 import { PageRoute } from 'nativescript-angular/router/page-router-outlet';
 import { ActivatedRoute } from '@angular/router/src/router_state';
 import { UrlSegment } from '@angular/router/src/url_tree';
 import { RouterExtensions } from 'nativescript-angular/router/router-extensions';
 import { PanGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
-import { CalendarService } from '../calendar.service';
+import { CalendarService } from '../services/calendar.service';
 import * as screenShot from 'nativescript-screenshot';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
 import { AbsoluteLayout } from "ui/layouts/absolute-layout";

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input, Output, ViewContainerRef, EventEmitter } from '@angular/core'
 import { RouterExtensions } from 'nativescript-angular/router'
 import { GridLayout, ItemSpec } from 'tns-core-modules/ui/layouts/grid-layout/grid-layout';
-import { CalendarService, IDayItem, IDayMarker } from '../calendar.service';
+import { CalendarService, IDayItem, IDayMarker } from '../services/calendar.service';
 import { Label } from 'tns-core-modules/ui/label/label';
 import { TouchGestureEventData, PanGestureEventData, GestureEventData, PinchGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
 import { Border } from "tns-core-modules/ui/border";
