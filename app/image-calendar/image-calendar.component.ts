@@ -48,6 +48,10 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
       .switchMap((activatedRoute: ActivatedRoute) => activatedRoute.url)
       .subscribe((param: UrlSegment[]) => {
       });
+
+    this.calendarService.monthObservable.subscribe(monthMoment => {
+      console.log('monthMoment', monthMoment.toString());
+    })
   }
 
   ngOnInit() {

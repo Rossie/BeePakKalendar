@@ -3,27 +3,36 @@ import * as moment from 'moment';
 import { SettingsService } from '../services/settings.service'
 import { Moment } from 'moment';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class CalendarService {
     public imageCalendar: IImageCalendar;
-    
     private locale = 'hu';
-    private monthOffset: number = 0;
+    public daysObservable: BehaviorSubject<IDayItem[]>;
+    public monthObservable: BehaviorSubject<Moment>;
+    private actMonth: Moment;
 
     constructor(
         private settings: SettingsService
     ) {
         moment.locale(this.locale);
+        this.actMonth = moment().date(1); // set current month 1st
+        this.monthObservable = new BehaviorSubject<Moment>(this.actMonth);
+        this.daysObservable = new BehaviorSubject<IDayItem[]>(this.getMonth());
     }
 
     stepMonth(monthDelta) {
-        this.monthOffset += monthDelta;
+        this.actMonth.add(monthDelta, 'months');
+        this.monthObservable.next(this.actMonth.clone());
+        this.daysObservable.next(this.getMonth());
     }
 
     getMonth(): any[] {
         var result: IDayItem[] = [];
-        let now = moment().date(1).add(this.monthOffset, 'months'); // first day of month
+        // let now = moment().date(1).add(this.monthOffset, 'months'); // first day of month
+        let now = this.actMonth.clone();
         let actWeek = now.week();
         let actMonth = now.month();
         let row = 0;
@@ -51,7 +60,7 @@ export class CalendarService {
     }
 
     getMonthName(): string {
-        return moment().date(1).add(this.monthOffset, 'months').format('MMMM');
+        return this.actMonth.format('MMMM');
     }
 
     /**
