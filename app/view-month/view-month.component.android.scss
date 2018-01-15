@@ -15,11 +15,17 @@
 .month-name {
     font-size: 20;
     height: 30;
-    letter-spacing: 0.5;
+    letter-spacing: 0.3;
+    // margin: 0 11;
+}
+
+.month-line {
     border-bottom-color: $marker-color-2;
     border-bottom-width: 1;
-    margin: 0 11;
     margin-bottom: 4;
+    margin-right: 11;
+    margin-left: 11;
+    height: 1px;
 }
 
 .calendar-grid > .daynumber {

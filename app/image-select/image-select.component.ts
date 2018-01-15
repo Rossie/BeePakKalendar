@@ -10,10 +10,11 @@ import * as imagepicker from "nativescript-imagepicker"; // https://github.com/N
 import { ImageService } from '../services/image.service';
 import { ActivatedRoute } from '@angular/router/src/router_state';
 import { UrlSegment } from '@angular/router/src/url_tree';
-import { CalendarService } from '../services/calendar.service';
+import { CalendarService, IImageCalendar } from '../services/calendar.service';
 import { GridLayout } from "ui/layouts/grid-layout";
 import { Label } from "ui/label";
 import { android } from 'tns-core-modules/application/application';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
     moduleId: module.id,
@@ -24,13 +25,15 @@ import { android } from 'tns-core-modules/application/application';
 export class ImageSelectComponent implements OnInit {
     @ViewChild('scrollView') scrollView: ElementRef
 
-    private isLoading = true
+    public isLoading = true
+    public images: IImageCalendar[];
 
     constructor(
         private router: RouterExtensions,
         private imageService: ImageService,
         private pageRoute: PageRoute,
-        private calendarService: CalendarService
+        private calendarService: CalendarService,
+        private settings: SettingsService
     ) {
     }
 
@@ -41,11 +44,12 @@ export class ImageSelectComponent implements OnInit {
         .subscribe((param: UrlSegment[]) => {
         });
 
-        // let folderPath = android.context.getExternalStoragePublicDirectory;
-        // console.dir("folderPath", folderPath);
+        this.images = this.settings.getImageList();
+
+        console.log("settings.getImageList::::", JSON.stringify(this.images, null, 4));
     }
 
-    selectImage() {
+    newImage() {
         const context = imagepicker.create({
             mode: "single" // use "multiple" for multiple selection
         });
@@ -66,6 +70,11 @@ export class ImageSelectComponent implements OnInit {
             // process error
             console.error(e);
         });    
+    }
+
+    loadImage(image: IImageCalendar) {
+        this.calendarService.selectCalendar(image);
+        this.router.navigateByUrl('image-calendar');
     }
 
     next() {

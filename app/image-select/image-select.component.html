@@ -1,7 +1,22 @@
-<StackLayout class="content-layout" orientation="vertical" horizontalAlignment="center" verticalAlignment="center">
-    <app-message-win message="Válaszd ki a háttérképet, amin a naptárat fogod elhelyezni."></app-message-win>
+<WrapLayout class="image-list" orientation="horizontal" backgroundColor="lightgray">
+    
+    <AbsoluteLayout *ngFor="let image of images" width="20%" height="20%" backgroundColor="blue">
+        <Image width="100%" height="100%" [src]="image.imageFile" stretch="aspectFill" (tap)="loadImage(image)"></Image>
+        
+    </AbsoluteLayout>
+
+    <Button class="btn btn-primary btn-add" text="&#xf067;" width="20%" height="20%" (tap)="newImage()"></Button>
+
+</WrapLayout>
+<!-- <StackLayout class="content-layout" orientation="vertical" horizontalAlignment="center" verticalAlignment="center">
+    <app-message-win message=""></app-message-win>
     <Button class="btn btn-primary" horizontalAlignment="center" id="btn_select_img" text="Kép kiválasztása" (tap)="selectImage()"></Button>
-</StackLayout>
+</StackLayout> -->
+
+<app-closeable>
+    <app-message-win message="Adj hozzá új háttérképet, amin a naptárat fogod elhelyezni."></app-message-win>
+</app-closeable>
+
 <ActionBar title="test" android.icon="res://icon" android.iconVisibility="always">
     <StackLayout orientation="horizontal"
       ios:horizontalAlignment="center"

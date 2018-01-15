@@ -10,6 +10,7 @@ import * as moment from 'moment';
 import { ModalDialogService, ModalDialogOptions } from "nativescript-angular/modal-dialog";
 import { DayMarkerComponent } from '../day-marker/day-marker.component';
 import * as _ from 'lodash';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
     moduleId: module.id,
@@ -30,6 +31,7 @@ export class ViewMonthComponent implements OnInit {
         private calendarService: CalendarService,
         private modalService: ModalDialogService,
         private viewContainerRef: ViewContainerRef,
+        private settings: SettingsService,
     ) { 
     }
     
@@ -52,6 +54,7 @@ export class ViewMonthComponent implements OnInit {
         this.modalService.showModal(DayMarkerComponent, options)
         .then((result:IDayMarker) => {
             day.marker = result;
+            this.settings.setDay(day.date, result);
         });
     }    
 

@@ -1,5 +1,5 @@
 <AbsoluteLayout class="mainLayout">
-    <Image class="resultImage" #imgResult stretch="aspectFit"></Image>
+    <Image class="resultImage" [src]="imgResult" stretch="aspectFit"></Image>
     <DockLayout class="dockLayout" stretchLastChild="false"> 
         <StackLayout orientation="vertical" dock="bottom">
             <Button class="btn btn-primary" (tap)="setWallpaper()">

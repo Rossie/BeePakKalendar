@@ -10,6 +10,9 @@ import { OptionsCommon, Result } from 'nativescript-imagecropper/interfaces';
 // Own libraries
 import { ImageService } from '../services/image.service';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
+import { IImageCalendar, CalendarService } from '../services/calendar.service';
+import * as moment from 'moment';
+import { SettingsService } from '../services/settings.service';
 
 @Component({
     moduleId: module.id,
@@ -27,6 +30,8 @@ export class ImageCropComponent implements OnInit {
         private router: RouterExtensions,
         private pageRoute: PageRoute,
         private imageService: ImageService,
+        private settings: SettingsService,
+        private calendarService: CalendarService,
     ) { 
         this.pageRoute.activatedRoute
         .switchMap((activatedRoute: ActivatedRoute) => activatedRoute.url)
@@ -46,11 +51,17 @@ export class ImageCropComponent implements OnInit {
         };
         this.imageCropper.show(imgSrc, options)
         .then(result => {
-            this.imageService.saveCroppedFile(result.image);
+            let file = this.imageService.saveCroppedFile(result.image);
+            let imageCalendar:IImageCalendar = <IImageCalendar>{
+                imageFile: file,
+                createdOn: moment().unix()
+            };  
+            this.settings.addImage(imageCalendar);
+            this.calendarService.selectCalendar(imageCalendar);
             this.router.navigateByUrl('image-calendar');
         })
         .catch(error => {
-            console.error('Image Cropper Error:');
+            console.error('Image Cropper Error:', JSON.stringify(error));
             this.router.navigateByUrl('image-select');
         });
     }

@@ -8,6 +8,8 @@ import * as Toast from 'nativescript-toast';
 import { exit } from 'nativescript-exit';
 import { SettingsService } from '../services/settings.service';
 import * as SocialShare from "nativescript-social-share";
+import { CalendarService } from '../services/calendar.service';
+import { ImageSource } from 'tns-core-modules/image-source/image-source';
 
 @Component({
     moduleId: module.id,
@@ -16,27 +18,26 @@ import * as SocialShare from "nativescript-social-share";
     styleUrls: ['./image-result.component.scss']
 })
 export class ImageResultComponent implements OnInit {
-
-    @ViewChild('imgResult') imgResultRef: ElementRef;
-
-    private imgResult: Image;
+    public imgResult: ImageSource;
 
     constructor(
         private router: RouterExtensions,
         private imageService: ImageService,
-        private settingsService: SettingsService
+        private settingsService: SettingsService,
+        private calendarService: CalendarService,
     ) { }
 
     ngOnInit() { 
-        let img:Image = this.imgResultRef.nativeElement;
-        img.imageSource = this.imageService.getCalendarSource();
+        // let img:Image = this.imgResultRef.nativeElement;
+        this.imgResult = this.imageService.calendarImageSource;
+        // img.imageSource = this.imageService.getImageSourceFromFile(this.calendarService.imageCalendar.imageFile);
 
         this.settingsService.notFirstRun();
     }
     
     setWallpaper() {
-        if (this.imgResultRef.nativeElement.android){
-            android.context.setWallpaper(this.imageService.getCalendarSource().android);
+        if (this.imageService.calendarImageSource.android){
+            android.context.setWallpaper(this.imageService.calendarImageSource.android);
             Toast.makeText('Háttérkép beállítva.', 'long').show();
         }
         else
@@ -46,12 +47,12 @@ export class ImageResultComponent implements OnInit {
     saveToFile() {
         let file = (new Date()).getTime() + '.png';
         file = this.imageService.getImagePath(file);
-        this.imageService.getCalendarSource().saveToFile(file, "png");
+        this.imageService.calendarImageSource.saveToFile(file, "png");
         Toast.makeText('Kép elmentve.', 'long').show();
     }
 
     share() {
-        SocialShare.shareImage(this.imageService.getCalendarSource());
+        SocialShare.shareImage(this.imageService.calendarImageSource);
     }
 
     exit() {

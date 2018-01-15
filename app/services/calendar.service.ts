@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
 import { SettingsService } from '../services/settings.service'
+import { Moment } from 'moment';
+import { ImageSource } from 'tns-core-modules/image-source/image-source';
 
 @Injectable()
 export class CalendarService {
-
+    public imageCalendar: IImageCalendar;
+    
     private locale = 'hu';
     private monthOffset: number = 0;
 
     constructor(
-        private settingsService: SettingsService
+        private settings: SettingsService
     ) {
         moment.locale(this.locale);
     }
@@ -25,8 +28,16 @@ export class CalendarService {
         let actMonth = now.month();
         let row = 0;
         do {
+            // get markers for this day from storage
+            let marker:IDayMarker = this.settings.getDay(now);
             // insert result object
-            result.push({ row: row, col: this.convertDayOfWeek(now.day()), day: now.date() });
+            result.push({ 
+                row: row, 
+                col: this.convertDayOfWeek(now.day()), 
+                day: now.date(),
+                date: now.clone(),
+                marker: marker
+            });
             // next day
             now.add(1, 'day');
 
@@ -52,18 +63,32 @@ export class CalendarService {
         return cday < 0 ? 6 : cday;
     }
 
+    selectCalendar(imageCalendar:IImageCalendar) {
+        this.imageCalendar = imageCalendar;
+    }
 }
 
 export interface IDayItem {
     row: number;
     col: number;
     day: number;
+    date: Moment;
     marker?: IDayMarker;
 }
 
 export interface IDayMarker {
     icon: string;
     cssClass: string;
+}
+
+export interface IImageCalendar {
+    imageFile: string;
+    calendarLeft: number;
+    calendarTop: number;
+    calendarScale: number;
+    createdOn: number;
+    lastMonth: number;
+    // imageSource?: ImageSource;
 }
 
 export var markers: IDayMarker[] = [

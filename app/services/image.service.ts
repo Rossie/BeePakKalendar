@@ -12,13 +12,13 @@ export class ImageService {
 
     public selectedFileImageSource: ImageSource;
     public croppedFile: string;
-    public croppedFileImageSource: ImageSource;
+    // public croppedFileImageSource: ImageSource;
     // public calendarFile: string;
     public calendarImageSource: ImageSource;
 
     constructor(
     ) { }
-    
+
     private saveToFile(imageSource:ImageSource){
         const doc = fs.knownFolders.documents();
         const imgFile = fs.path.join(doc.path, (new Date()).getTime() + '.png');
@@ -31,6 +31,12 @@ export class ImageService {
         return is;
     }
 
+    getImageSourceFromFile(file:string) {
+        let result:ImageSource = new ImageSource();
+        result.loadFromFile(file);
+        return result;
+    }
+
     saveSelectedfile(imageSource:ImageSource) {
         this.selectedFileImageSource = imageSource;
         // this.selectedFile = this.saveToFile(imageSource);
@@ -38,7 +44,7 @@ export class ImageService {
     }
 
     saveCroppedFile(imageSource:ImageSource) {
-        this.croppedFileImageSource = imageSource;
+        // this.croppedFileImageSource = imageSource;
         this.croppedFile = this.saveToFile(imageSource);
         return this.croppedFile;
     }
@@ -47,19 +53,19 @@ export class ImageService {
         this.calendarImageSource = imageSource;
     }
 
-    getCroppedSource() {
+    /* getCroppedSource() {
         return this.croppedFileImageSource;
-    }
+    } */
 
     getSelectedSource() {
         return this.selectedFileImageSource;
     }
 
-    getCalendarSource() {
+   /*  getCalendarSource() {
         return this.calendarImageSource;
-    }
+    } */
 
-    getLastImageSource(){
+    /* getLastImageSource(){
         return new Promise<ImageSource>((resolve, reject) => {
             fs.knownFolders.documents().getEntities()
             .then((filelist: fs.FileSystemEntity[]) => {
@@ -73,7 +79,7 @@ export class ImageService {
                 }
             });
         });
-    }
+    } */
 
     getImagePath(img:string):string {
         // https://github.com/NickIliev/NativeScript-Cosmos-Databank/blob/master/app/views/helpers/files/file-helpers.ts

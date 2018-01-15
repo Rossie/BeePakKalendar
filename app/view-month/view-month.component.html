@@ -1,19 +1,20 @@
 <GridLayout class="calendar-grid"
-    columns="*,*,*,*,*,*,*" rows="*,*,*,*,*,*,*,*" >
+    columns="*,*,*,*,*,*,*" rows="*,auto,*,*,*,*,*,*,*" >
     <Label class="month-name" text="{{monthName | uppercase}}" row="0" col="0" colSpan="7"></Label>
+    <Label class="month-line" row="1" col="0" colSpan="7"></Label>
 
-    <Label text="H"  row="1" col="0"></Label>
-    <Label text="K"  row="1" col="1"></Label>
-    <Label text="SZ" row="1" col="2"></Label>
-    <Label text="CS" row="1" col="3"></Label>
-    <Label text="P"  row="1" col="4"></Label>
-    <Label text="SZ" row="1" col="5"></Label>
-    <Label text="V"  row="1" col="6"></Label>
+    <Label text="H"  row="2" col="0"></Label>
+    <Label text="K"  row="2" col="1"></Label>
+    <Label text="SZ" row="2" col="2"></Label>
+    <Label text="CS" row="2" col="3"></Label>
+    <Label text="P"  row="2" col="4"></Label>
+    <Label text="SZ" row="2" col="5"></Label>
+    <Label text="V"  row="2" col="6"></Label>
     
-    <Label class="marker" *ngFor="let day of days" [row]="day.row + 2" [col]="day.col" 
+    <Label class="marker" *ngFor="let day of days" [row]="day.row + 3" [col]="day.col" 
         [text]="day.marker?.icon" [ngClass]='day.marker?.cssClass' ></Label>
 
-    <Label class="daynumber" *ngFor="let day of days" [row]="day.row + 2" [col]="day.col" [text]="day.day" 
+    <Label class="daynumber" *ngFor="let day of days" [row]="day.row + 3" [col]="day.col" [text]="day.day" 
         (tap)="onDayTap($event, day)" (pan)="onDayPan($event)"></Label>
     
 </GridLayout>
