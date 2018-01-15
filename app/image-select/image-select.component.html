@@ -2,7 +2,7 @@
     
     <AbsoluteLayout *ngFor="let image of images" width="20%" height="20%" backgroundColor="blue">
         <Image width="100%" height="100%" [src]="image.imageFile" stretch="aspectFill" (tap)="loadImage(image)"></Image>
-        
+        <Label class="month-name" [text]="getMonthName(image)" width="100%"></Label>
     </AbsoluteLayout>
 
     <Button class="btn btn-primary btn-add" text="&#xf067;" width="20%" height="20%" (tap)="newImage()"></Button>
@@ -13,7 +13,7 @@
     <Button class="btn btn-primary" horizontalAlignment="center" id="btn_select_img" text="Kép kiválasztása" (tap)="selectImage()"></Button>
 </StackLayout> -->
 
-<app-closeable>
+<app-closeable settingsName="image_select_help_closed">
     <app-message-win message="Adj hozzá új háttérképet, amin a naptárat fogod elhelyezni."></app-message-win>
 </app-closeable>
 

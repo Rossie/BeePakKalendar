@@ -7,6 +7,7 @@ $beepakk: #ffcc00 !default;
 $beepakkMenta: #81c14b !default;
 
 $iconFont: 'fontawesome-webfont';
+$titleFont: 'ArimaMadurai-Bold';
 
 // nativescript-theme-core\scss\_variables.scss
 // Buttons
@@ -25,7 +26,7 @@ $btn-color-inverse: $black;
   
 .action-bar-title {
     font-size: 18;
-    font-family: "ArimaMadurai-Bold";
+    font-family: $titleFont;
 }
 
 $marker-color-1: #edc387;

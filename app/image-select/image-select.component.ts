@@ -6,6 +6,7 @@ import * as fs from "file-system";
 import "rxjs/add/operator/switchMap";
 // 3rd pary libraries
 import * as imagepicker from "nativescript-imagepicker"; // https://github.com/NativeScript/nativescript-imagepicker
+import * as moment from 'moment';
 // Own libraries
 import { ImageService } from '../services/image.service';
 import { ActivatedRoute } from '@angular/router/src/router_state';
@@ -23,10 +24,9 @@ import { SettingsService } from '../services/settings.service';
     styleUrls: ['./image-select.component.scss']
 })
 export class ImageSelectComponent implements OnInit {
-    @ViewChild('scrollView') scrollView: ElementRef
-
     public isLoading = true
     public images: IImageCalendar[];
+    @ViewChild('scrollView') scrollView: ElementRef
 
     constructor(
         private router: RouterExtensions,
@@ -34,8 +34,7 @@ export class ImageSelectComponent implements OnInit {
         private pageRoute: PageRoute,
         private calendarService: CalendarService,
         private settings: SettingsService
-    ) {
-    }
+    ) { }
 
     ngOnInit() {
         this.isLoading = false;
@@ -45,8 +44,7 @@ export class ImageSelectComponent implements OnInit {
         });
 
         this.images = this.settings.getImageList();
-
-        console.log("settings.getImageList::::", JSON.stringify(this.images, null, 4));
+        // console.log("settings.getImageList::::", JSON.stringify(this.images, null, 4));
     }
 
     newImage() {
@@ -73,11 +71,16 @@ export class ImageSelectComponent implements OnInit {
     }
 
     loadImage(image: IImageCalendar) {
+        // store selected image record
         this.calendarService.selectCalendar(image);
         this.router.navigateByUrl('image-calendar');
     }
 
     next() {
         this.router.navigateByUrl('image-crop');
+    }
+
+    getMonthName(image:IImageCalendar) {
+        return image.lastMonth ? moment.unix(image.lastMonth).format('MMMM') : '';
     }
 }
