@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as moment from 'moment';
 import { SettingsService } from '../services/settings.service'
-import { Moment } from 'moment';
+import { Moment, isMoment } from 'moment';
 import { ImageSource } from 'tns-core-modules/image-source/image-source';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Subject } from 'rxjs/Subject';
@@ -21,6 +21,18 @@ export class CalendarService {
         this.actMonth = moment().date(1); // set current month 1st
         this.monthObservable = new BehaviorSubject<Moment>(this.actMonth);
         this.daysObservable = new BehaviorSubject<IDayItem[]>(this.getMonth());
+    }
+
+    setMonth(newMonth:Moment | number){
+        if (moment.isMoment(newMonth)) {
+            this.actMonth = newMonth.clone().date(1);
+        }
+        else {
+            this.actMonth = moment.unix(newMonth);
+        }
+
+        this.monthObservable.next(this.actMonth.clone());
+        this.daysObservable.next(this.getMonth());
     }
 
     stepMonth(monthDelta) {
@@ -74,6 +86,9 @@ export class CalendarService {
 
     selectCalendar(imageCalendar:IImageCalendar) {
         this.imageCalendar = imageCalendar;
+        if (imageCalendar.lastMonth) {
+            this.setMonth(imageCalendar.lastMonth);
+        }          
     }
 }
 
