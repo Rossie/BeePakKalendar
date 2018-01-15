@@ -50,7 +50,9 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
       });
 
     this.calendarService.monthObservable.subscribe(monthMoment => {
-      console.log('monthMoment', monthMoment.toString());
+      // console.log('ImageCalendarComponent: monthMoment', monthMoment.toString());
+      this.calendarService.imageCalendar.lastMonth = monthMoment.unix();
+      this.settings.saveImageCalendar(this.calendarService.imageCalendar);      
     })
   }
 
@@ -62,7 +64,6 @@ export class ImageCalendarComponent implements OnInit, AfterViewChecked {
     this.calendar_y = this.calendarService.imageCalendar.calendarTop || 0;
     this.calendarScale = this.calendarService.imageCalendar.calendarScale || 1 ;
     // console.log("ngOnInit", JSON.stringify(this.calendarService.imageCalendar, null, 4));
-    // if (this.calendarService.imageCalendar.lastMonth)
 
     this.screenWidthPx = platformModule.screen.mainScreen.widthPixels;
     this.screenHeightPx = platformModule.screen.mainScreen.heightPixels;
