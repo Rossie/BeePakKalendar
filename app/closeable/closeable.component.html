@@ -1,5 +1,5 @@
 <StackLayout *ngIf="!closed" orientation="vertical" verticalAlignment="center" >
   <ng-content></ng-content>
   <Label width="40" height="40" class="icon-font close" paddingTop="7" borderRadius="20" translateX="-22" translateY="-41"
-    (tap)="closed = true" text="&#x0f00d;" horizontalAlignment="right"></Label>
+    (tap)="close()" text="&#x0f00d;" horizontalAlignment="right"></Label>
 </StackLayout>

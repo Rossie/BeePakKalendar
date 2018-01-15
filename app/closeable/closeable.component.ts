@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import * as settings from "application-settings";
 
 @Component({
   moduleId: module.id,
@@ -7,11 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./closeable.component.scss']
 })
 export class CloseableComponent implements OnInit {
-  
-  public closed:boolean = false;
+  @Output() onClosed: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Input() closed:boolean = false;
+  @Input() settingsName:string = '';
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    if (this.settingsName) {
+      this.closed = settings.getBoolean(this.settingsName, false);
+    }
+  }
 
+  close(){
+    this.closed = true;
+    if (this.settingsName) {
+      settings.setBoolean(this.settingsName, true);
+    }
+    this.onClosed.emit(this.closed);
+  }
 }
