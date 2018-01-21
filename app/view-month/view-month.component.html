@@ -15,6 +15,6 @@
         [text]="day.marker?.icon" [ngClass]='day.marker?.cssClass' ></Label>
 
     <Label class="daynumber" *ngFor="let day of days" [row]="day.row + 3" [col]="day.col" [text]="day.day" 
-        (tap)="onDayTap($event, day)" (pan)="onDayPan($event)"></Label>
+        (tap)="onDayTap($event, day)" (pan)="onDayPan($event)" [ngClass]="{'has-day-text': day.text}"></Label>
     
 </GridLayout>

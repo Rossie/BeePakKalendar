@@ -1,8 +1,11 @@
 <StackLayout margin="24" horizontalAlignment="center" verticalAlignment="center">
+    <TextField class="input input-border" [(ngModel)]="dayText" hint="Megjegyzés a naphoz"></TextField>
     <GridLayout #markerGrid class="marker-grid" columns="*,*,*" rows="*,*,*" height="200">
         <Label *ngFor="let marker of markers; index as i" [row]="getRow(i)" [col]="getCol(i)" class="icon" [ngClass]="marker.cssClass"
             [text]="marker.icon" (tap)="onTap(marker)"></Label>
     </GridLayout>
-
-    <Button text="Törlés" class="btn btn-primary" (tap)="onTap(null)"></Button>
+    <GridLayout rows="auto" columns="auto,*">
+        <Button col="0" text="Törlés" class="btn btn-primary" (tap)="onTap(null)"></Button>
+        <Button col="1" text="Mentés" class="btn btn-primary" (tap)="onSave()"></Button>
+    </GridLayout>
 </StackLayout>

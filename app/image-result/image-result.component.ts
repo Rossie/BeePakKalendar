@@ -55,6 +55,10 @@ export class ImageResultComponent implements OnInit {
         SocialShare.shareImage(this.imageService.calendarImageSource);
     }
 
+    goHome() {
+        this.router.navigateByUrl('image-select');
+    }
+
     exit() {
         exit();
     }

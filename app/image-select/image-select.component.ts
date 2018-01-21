@@ -7,11 +7,12 @@ import "rxjs/add/operator/switchMap";
 // 3rd pary libraries
 import * as imagepicker from "nativescript-imagepicker"; // https://github.com/NativeScript/nativescript-imagepicker
 import * as moment from 'moment';
+import { Moment } from 'moment';
 // Own libraries
 import { ImageService } from '../services/image.service';
 import { ActivatedRoute } from '@angular/router/src/router_state';
 import { UrlSegment } from '@angular/router/src/url_tree';
-import { CalendarService, IImageCalendar } from '../services/calendar.service';
+import { CalendarService, IImageCalendar, AGENDA_FORMAT } from '../services/calendar.service';
 import { GridLayout } from "ui/layouts/grid-layout";
 import { Label } from "ui/label";
 import { android } from 'tns-core-modules/application/application';
@@ -26,6 +27,7 @@ import { SettingsService } from '../services/settings.service';
 export class ImageSelectComponent implements OnInit {
     public isLoading = true
     public images: IImageCalendar[];
+    public dayTexts;
     @ViewChild('scrollView') scrollView: ElementRef
 
     constructor(
@@ -41,11 +43,12 @@ export class ImageSelectComponent implements OnInit {
         this.pageRoute.activatedRoute
         .switchMap((activatedRoute: ActivatedRoute) => activatedRoute.url)
         .subscribe((param: UrlSegment[]) => {
+            this.dayTexts = this.settings.getAllDayText(moment());
+            // console.log(JSON.stringify(this.dayTexts, null, 2));
         });
 
         this.images = this.settings.getImageList();
-        // console.log("settings.getImageList::::", JSON.stringify(this.images, null, 4));
-    }
+   }
 
     newImage() {
         const context = imagepicker.create({
@@ -82,5 +85,9 @@ export class ImageSelectComponent implements OnInit {
 
     getMonthName(image:IImageCalendar) {
         return image.lastMonth ? moment.unix(image.lastMonth).format('MMMM') : '';
+    }
+
+    getAgendaDateFormat(date:Moment): string {
+        return date.format(AGENDA_FORMAT);
     }
 }

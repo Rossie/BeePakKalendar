@@ -50,14 +50,16 @@ export class CalendarService {
         let row = 0;
         do {
             // get markers for this day from storage
-            let marker:IDayMarker = this.settings.getDay(now);
+            let marker:IDayMarker = this.settings.getDayMarker(now);
+            let dayText: string = this.settings.getDayText(now);
             // insert result object
             result.push({ 
                 row: row, 
                 col: this.convertDayOfWeek(now.day()), 
                 day: now.date(),
                 date: now.clone(),
-                marker: marker
+                marker: marker,
+                text: dayText
             });
             // next day
             now.add(1, 'day');
@@ -92,12 +94,15 @@ export class CalendarService {
     }
 }
 
+export const AGENDA_FORMAT:string = 'MMM. DD.(dd)';
+
 export interface IDayItem {
     row: number;
     col: number;
     day: number;
     date: Moment;
     marker?: IDayMarker;
+    text?:string;
 }
 
 export interface IDayMarker {

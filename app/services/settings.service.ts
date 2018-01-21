@@ -7,16 +7,19 @@ import * as _ from 'lodash';
 
 const NOT_FIRST_RUN = "not_first_run";
 const CALENDAR = "calendar";
+const TEXTS = "texts";
 const IMAGES = "images";
 
 @Injectable()
 export class SettingsService {
   _images: IImageCalendar[];
-  _calendar: Object;
+  _calendarMarkers: Object;
+  _calendarTexts: Object;
 
   constructor() {
     this.readCalendar();
     this.readImages();
+    this.readTexts();
   }
 
   /**
@@ -33,25 +36,78 @@ export class SettingsService {
   /**
    * Calendar managing functions
    */
-  setDay(day: Moment, mark: IDayMarker) {
+  setDayMarker(day: Moment, mark: IDayMarker) {
     let secs = day.startOf('day').unix();
-    this._calendar[secs] = mark;
+    this._calendarMarkers[secs] = mark;
+    this.saveCalendar();
+  }
+  
+  removeDayMarker(day:Moment) {
+    let secs = day.startOf('day').unix();
+    delete this._calendarMarkers[secs];
     this.saveCalendar();
   }
 
-  getDay(day: Moment): IDayMarker {
+  getDayMarker(day: Moment): IDayMarker {
     let secs = day.startOf('day').unix();
-    return this._calendar.hasOwnProperty(secs) ? this._calendar[secs] : false;
+    return this._calendarMarkers.hasOwnProperty(secs) ? this._calendarMarkers[secs] : false;
   }
 
   private readCalendar() {
-    if (!this._calendar) {
-      this._calendar = JSON.parse(settings.getString(CALENDAR, '{}'));
+    if (!this._calendarMarkers) {
+      this._calendarMarkers = JSON.parse(settings.getString(CALENDAR, '{}'));
     }
   }
 
   private saveCalendar() {
-    settings.setString(CALENDAR, JSON.stringify(this._calendar));
+    settings.setString(CALENDAR, JSON.stringify(this._calendarMarkers));
+  }
+
+  /**
+   * Calendar texts managing functions
+   */
+
+  setDayText(day: Moment, text: string) {
+    let secs = day.startOf('day').unix();
+    this._calendarTexts[secs] = text;
+    this.saveTexts();
+  }
+  
+  removeDayText(day:Moment) {
+    let secs = day.startOf('day').unix();
+    delete this._calendarTexts[secs];
+    this.saveTexts();
+  }
+
+  getDayText(day: Moment): string {
+    let secs = day.startOf('day').unix();
+    return this._calendarTexts.hasOwnProperty(secs) ? this._calendarTexts[secs] : '';
+  }
+
+  getAllDayText(from:Moment) {
+    let result = [];
+    let fromUnix = from.unix();
+    _.forIn(this._calendarTexts, (val, key) => {
+      if (+key >= fromUnix) {
+        result.push({
+          day: key,
+          date: moment.unix(+key),
+          text: val
+        })
+      }
+    });
+
+    return result;
+  }
+
+  private readTexts() {
+    if (!this._calendarTexts) {
+      this._calendarTexts = JSON.parse(settings.getString(TEXTS, '{}'));
+    }
+  }
+
+  private saveTexts() {
+    settings.setString(TEXTS, JSON.stringify(this._calendarTexts));
   }
 
   /**

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, Input, Output, ViewContainerRef, EventEmitter } from '@angular/core'
 import { RouterExtensions } from 'nativescript-angular/router'
 import { GridLayout, ItemSpec } from 'tns-core-modules/ui/layouts/grid-layout/grid-layout';
-import { CalendarService, IDayItem, IDayMarker } from '../services/calendar.service';
+import { CalendarService, IDayItem, IDayMarker, markers } from '../services/calendar.service';
 import { Label } from 'tns-core-modules/ui/label/label';
 import { TouchGestureEventData, PanGestureEventData, GestureEventData, PinchGestureEventData } from 'tns-core-modules/ui/gestures/gestures';
 import { Border } from "tns-core-modules/ui/border";
@@ -49,16 +49,41 @@ export class ViewMonthComponent implements OnInit {
 
     onDayTap(event: GestureEventData, day: IDayItem){
         let options: ModalDialogOptions = {
-            viewContainerRef: this.viewContainerRef
+            viewContainerRef: this.viewContainerRef,
+            context: {
+                dayText: this.settings.getDayText(day.date),
+                marker: day.marker
+            }
         };
         this.modalService.showModal(DayMarkerComponent, options)
-        .then((result:IDayMarker) => {
-            day.marker = result;
-            this.settings.setDay(day.date, result);
+        .then((result) => {
+            if (result.marker) {
+                day.marker = result.marker; // update view
+                this.settings.setDayMarker(day.date, result.marker); // store marker
+            }
+
+            if (result.dayText) {
+                day.text = result.dayText; // update view
+                this.settings.setDayText(day.date, result.dayText); // store text
+            }
+
+            // Delete marker and text
+            if (result.marker === null) {
+                day.marker = day.text = null; // update view
+                this.settings.removeDayMarker(day.date);
+                this.settings.removeDayText(day.date);
+            }
         });
     }    
 
     onDayPan($event) {
         this.innerPan.emit($event);
+    }
+
+    getCssClass(day:IDayItem){
+        let markercss = _.get(day, "marker.cssClass", '');
+        let daytextcss = _.get(day, "text", false) ? 'has-day-text' : '';
+        console.log(JSON.stringify(day), markercss, daytextcss);
+        return markers+' '+daytextcss;
     }
 }

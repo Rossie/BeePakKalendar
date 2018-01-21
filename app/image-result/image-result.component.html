@@ -20,12 +20,21 @@
                     <Span text=" MEGOSZTÁS"></Span>
                 </FormattedString>        
             </Button>
-            <Button class="btn btn-primary" (tap)="exit()">
-                <FormattedString>
-                    <Span text="&#xf08b;" class="icon-font"></Span>
-                    <Span text=" KILÉP"></Span>
-                </FormattedString>                
-            </Button>
+            
+            <GridLayout rows="auto" columns="*,*">
+                <Button col="0" class="btn btn-primary btn-yellow" (tap)="goHome()">
+                    <FormattedString>
+                        <Span text="&#xf015;" class="icon-font"></Span>
+                        <Span text=" KEZDŐLAPRA VISSZA"></Span>
+                    </FormattedString>        
+                </Button>
+                <Button col="1" class="btn btn-primary btn-yellow" (tap)="exit()">
+                    <FormattedString>
+                        <Span text="&#xf08b;" class="icon-font"></Span>
+                        <Span text=" KILÉP"></Span>
+                    </FormattedString>                
+                </Button>
+            </GridLayout>
 
         </StackLayout>
     </DockLayout>

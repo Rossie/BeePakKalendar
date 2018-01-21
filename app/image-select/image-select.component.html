@@ -1,13 +1,33 @@
-<WrapLayout class="image-list" orientation="horizontal" backgroundColor="lightgray">
-    
-    <AbsoluteLayout *ngFor="let image of images" width="20%" height="20%" backgroundColor="blue">
-        <Image width="100%" height="100%" [src]="image.imageFile" stretch="aspectFill" (tap)="loadImage(image)"></Image>
-        <Label class="month-name" [text]="getMonthName(image)" width="100%"></Label>
-    </AbsoluteLayout>
+<StackLayout orientation="vertical">
+    <ScrollView orientation="vertical" height="60%">
 
-    <Button class="btn btn-primary btn-add" text="&#xf067;" width="20%" height="20%" (tap)="newImage()"></Button>
+        <WrapLayout class="image-list" orientation="horizontal">
+            
+            <AbsoluteLayout *ngFor="let image of images" width="80" height="120" backgroundColor="blue">
+                <Image width="100%" height="100%" [src]="image.imageFile" stretch="aspectFill" (tap)="loadImage(image)"></Image>
+                <Label class="month-name" [text]="getMonthName(image)" width="100%"></Label>
+            </AbsoluteLayout>
+            
+            <Button class="btn btn-primary btn-add" text="&#xf067;" width="80" height="120" (tap)="newImage()"></Button>
+            
+        </WrapLayout>
 
-</WrapLayout>
+    </ScrollView>
+
+    <ScrollView orientation="vertical" height="40%">
+
+        <StackLayout orientation="vertical" margin="5">
+            
+            <StackLayout *ngFor="let text of dayTexts" orientation="horizontal">
+                <Label class="agenda-date" [text]="getAgendaDateFormat(text.date) + ': '"></Label>
+                <Label textWrap="true" [text]="text.text"></Label>
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</StackLayout>
 <!-- <StackLayout class="content-layout" orientation="vertical" horizontalAlignment="center" verticalAlignment="center">
     <app-message-win message=""></app-message-win>
     <Button class="btn btn-primary" horizontalAlignment="center" id="btn_select_img" text="Kép kiválasztása" (tap)="selectImage()"></Button>

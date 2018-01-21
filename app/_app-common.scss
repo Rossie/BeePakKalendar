@@ -24,6 +24,14 @@ $btn-color-inverse: $black;
 // $btn-margin-x:	16;
 // $btn-margin-y:	8;
   
+.btn-primary {
+
+    &.btn-yellow {
+        background-color: $beepakk;
+    }
+    
+}
+
 .action-bar-title {
     font-size: 18;
     font-family: $titleFont;
@@ -43,6 +51,10 @@ $marker-color-3: #8e8737;
 
 .marker-color-3 {
     color: $marker-color-3;
+}
+
+.has-day-text {
+    text-decoration: underline;
 }
 
 .icon-font {
