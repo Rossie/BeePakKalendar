@@ -41,14 +41,14 @@ export class ImageSelectComponent implements OnInit {
     ngOnInit() {
         this.isLoading = false;
         this.pageRoute.activatedRoute
-        .switchMap((activatedRoute: ActivatedRoute) => activatedRoute.url)
-        .subscribe((param: UrlSegment[]) => {
-            this.dayTexts = this.settings.getAllDayText(moment());
-            // console.log(JSON.stringify(this.dayTexts, null, 2));
-        });
+            .switchMap((activatedRoute: ActivatedRoute) => activatedRoute.url)
+            .subscribe((param: UrlSegment[]) => {
+                this.dayTexts = this.settings.getAllDayText(moment());
+                // console.log(JSON.stringify(this.dayTexts, null, 2));
+            });
 
         this.images = this.settings.getImageList();
-   }
+    }
 
     newImage() {
         const context = imagepicker.create({
@@ -56,21 +56,21 @@ export class ImageSelectComponent implements OnInit {
         });
 
         context.authorize()
-        .then(() => context.present())
-        .then(selection => {
-            selection.forEach(selected => {
-                // process the selected image
-                selected.getImage().then((imgSource: ImageSource) => {
-                    // save file into app document
-                    this.imageService.saveSelectedfile(imgSource);
-                    this.router.navigateByUrl('image-crop'); // navigate to next screen
+            .then(() => context.present())
+            .then(selection => {
+                selection.forEach(selected => {
+                    // process the selected image
+                    selected.getImage().then((imgSource: ImageSource) => {
+                        // save file into app document
+                        this.imageService.saveSelectedfile(imgSource);
+                        this.router.navigateByUrl('image-crop'); // navigate to next screen
+                    });
                 });
+                // list.items = selection;
+            }).catch(function (e) {
+                // process error
+                console.error(e);
             });
-            // list.items = selection;
-        }).catch(function (e) {
-            // process error
-            console.error(e);
-        });    
     }
 
     loadImage(image: IImageCalendar) {
@@ -83,11 +83,11 @@ export class ImageSelectComponent implements OnInit {
         this.router.navigateByUrl('image-crop');
     }
 
-    getMonthName(image:IImageCalendar) {
+    getMonthName(image: IImageCalendar) {
         return image.lastMonth ? moment.unix(image.lastMonth).format('MMMM') : '';
     }
 
-    getAgendaDateFormat(date:Moment): string {
+    getAgendaDateFormat(date: Moment): string {
         return date.format(AGENDA_FORMAT);
     }
 }

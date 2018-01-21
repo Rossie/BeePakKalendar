@@ -23,7 +23,7 @@ export class CalendarService {
         this.daysObservable = new BehaviorSubject<IDayItem[]>(this.getMonth());
     }
 
-    setMonth(newMonth:Moment | number){
+    setMonth(newMonth: Moment | number) {
         if (moment.isMoment(newMonth)) {
             this.actMonth = newMonth.clone().date(1);
         }
@@ -50,12 +50,12 @@ export class CalendarService {
         let row = 0;
         do {
             // get markers for this day from storage
-            let marker:IDayMarker = this.settings.getDayMarker(now);
+            let marker: IDayMarker = this.settings.getDayMarker(now);
             let dayText: string = this.settings.getDayText(now);
             // insert result object
-            result.push({ 
-                row: row, 
-                col: this.convertDayOfWeek(now.day()), 
+            result.push({
+                row: row,
+                col: this.convertDayOfWeek(now.day()),
                 day: now.date(),
                 date: now.clone(),
                 marker: marker,
@@ -86,15 +86,16 @@ export class CalendarService {
         return cday < 0 ? 6 : cday;
     }
 
-    selectCalendar(imageCalendar:IImageCalendar) {
+    selectCalendar(imageCalendar: IImageCalendar) {
         this.imageCalendar = imageCalendar;
         if (imageCalendar.lastMonth) {
             this.setMonth(imageCalendar.lastMonth);
-        }          
+        }
     }
 }
 
-export const AGENDA_FORMAT:string = 'MMM. DD.(dd)';
+export const AGENDA_FORMAT: string = 'MMM. DD.(dd)';
+export const FULL_DATE_FORMAT: string = 'YYYY. MMMM DD. dddd';
 
 export interface IDayItem {
     row: number;
@@ -102,12 +103,16 @@ export interface IDayItem {
     day: number;
     date: Moment;
     marker?: IDayMarker;
-    text?:string;
+    text?: string;
 }
 
 export interface IDayMarker {
     icon: string;
     cssClass: string;
+}
+
+export function compareDayMarkers(m1, m2) {
+    return m1 && m2 && m1.icon == m2.icon && m1.cssClass == m2.cssClass;
 }
 
 export interface IImageCalendar {

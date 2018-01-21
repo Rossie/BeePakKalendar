@@ -41,8 +41,8 @@ export class SettingsService {
     this._calendarMarkers[secs] = mark;
     this.saveCalendar();
   }
-  
-  removeDayMarker(day:Moment) {
+
+  removeDayMarker(day: Moment) {
     let secs = day.startOf('day').unix();
     delete this._calendarMarkers[secs];
     this.saveCalendar();
@@ -72,8 +72,8 @@ export class SettingsService {
     this._calendarTexts[secs] = text;
     this.saveTexts();
   }
-  
-  removeDayText(day:Moment) {
+
+  removeDayText(day: Moment) {
     let secs = day.startOf('day').unix();
     delete this._calendarTexts[secs];
     this.saveTexts();
@@ -84,7 +84,7 @@ export class SettingsService {
     return this._calendarTexts.hasOwnProperty(secs) ? this._calendarTexts[secs] : '';
   }
 
-  getAllDayText(from:Moment) {
+  getAllDayText(from: Moment) {
     let result = [];
     let fromUnix = from.unix();
     _.forIn(this._calendarTexts, (val, key) => {
@@ -131,7 +131,7 @@ export class SettingsService {
   }
 
   saveImageCalendar(imageCalendar: IImageCalendar) {
-    let foundIC = _.find(this._images, {imageFile: imageCalendar.imageFile});
+    let foundIC = _.find(this._images, { imageFile: imageCalendar.imageFile });
     // console.log('settings.service.ts: saveImageCalendar', JSON.stringify(imageCalendar, null, 4));
     if (foundIC) {
       Object.assign(foundIC, imageCalendar);

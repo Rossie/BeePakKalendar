@@ -12,3 +12,14 @@
     font-size: 12;
     padding: 14;
 }
+
+.marker-selected {
+    background-color: lighten($beepakk, 40);
+    border-color: $beepakk;
+    border-width: 1;
+}
+
+.marker-select-label {
+    margin: 8 14;
+    border-radius: 8;
+}

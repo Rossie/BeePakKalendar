@@ -19,9 +19,9 @@ import { SettingsService } from '../services/settings.service';
     styleUrls: ['./view-month.component.scss']
 })
 export class ViewMonthComponent implements OnInit {
-    public monthName:string;
+    public monthName: string;
     public actMonth: moment.Moment;
-    public days:IDayItem[] = [];
+    public days: IDayItem[] = [];
 
     // event bradcaster to outer component: image-calendar.component
     @Output('innerPan') innerPan: EventEmitter<PanGestureEventData> = new EventEmitter();
@@ -32,58 +32,60 @@ export class ViewMonthComponent implements OnInit {
         private modalService: ModalDialogService,
         private viewContainerRef: ViewContainerRef,
         private settings: SettingsService,
-    ) { 
+    ) {
     }
-    
-    ngOnInit() { 
+
+    ngOnInit() {
         this.actMonth = moment();
         this.days = this.calendarService.getMonth();
         this.monthName = this.calendarService.getMonthName();
     }
-    
-    stepMonth(delta:number){
+
+    stepMonth(delta: number) {
         this.calendarService.stepMonth(delta);
         this.days = this.calendarService.getMonth();
         this.monthName = this.calendarService.getMonthName();
     }
 
-    onDayTap(event: GestureEventData, day: IDayItem){
+    onDayTap(event: GestureEventData, day: IDayItem) {
         let options: ModalDialogOptions = {
             viewContainerRef: this.viewContainerRef,
             context: {
                 dayText: this.settings.getDayText(day.date),
-                marker: day.marker
+                day: day,
             }
         };
         this.modalService.showModal(DayMarkerComponent, options)
-        .then((result) => {
-            if (result.marker) {
-                day.marker = result.marker; // update view
-                this.settings.setDayMarker(day.date, result.marker); // store marker
-            }
+            .then((result) => {
+                if (!result) { return; } // closed with no selection
 
-            if (result.dayText) {
-                day.text = result.dayText; // update view
-                this.settings.setDayText(day.date, result.dayText); // store text
-            }
+                if (result.marker) {
+                    day.marker = result.marker; // update view
+                    this.settings.setDayMarker(day.date, result.marker); // store marker
+                }
 
-            // Delete marker and text
-            if (result.marker === null) {
-                day.marker = day.text = null; // update view
-                this.settings.removeDayMarker(day.date);
-                this.settings.removeDayText(day.date);
-            }
-        });
-    }    
+                if (result.dayText) {
+                    day.text = result.dayText; // update view
+                    this.settings.setDayText(day.date, result.dayText); // store text
+                }
+
+                // Delete marker and text
+                if (result.marker === null) {
+                    day.marker = day.text = null; // update view
+                    this.settings.removeDayMarker(day.date);
+                    this.settings.removeDayText(day.date);
+                }
+            });
+    }
 
     onDayPan($event) {
         this.innerPan.emit($event);
     }
 
-    getCssClass(day:IDayItem){
+    getCssClass(day: IDayItem) {
         let markercss = _.get(day, "marker.cssClass", '');
         let daytextcss = _.get(day, "text", false) ? 'has-day-text' : '';
         console.log(JSON.stringify(day), markercss, daytextcss);
-        return markers+' '+daytextcss;
+        return markers + ' ' + daytextcss;
     }
 }

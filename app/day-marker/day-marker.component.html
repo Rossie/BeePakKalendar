@@ -1,11 +1,18 @@
 <StackLayout margin="24" horizontalAlignment="center" verticalAlignment="center">
+
+    <Label [text]="actualDay" textAlignment="center"></Label>
     <TextField class="input input-border" [(ngModel)]="dayText" hint="Megjegyzés a naphoz"></TextField>
-    <GridLayout #markerGrid class="marker-grid" columns="*,*,*" rows="*,*,*" height="200">
+    
+    <GridLayout #markerGrid class="marker-grid" columns="*,*,*" rows="*,*,*" height="200">        
+        <Label *ngFor="let mark of markers; index as i" text="" class="marker-select-label" [row]="getRow(i)" [col]="getCol(i)" 
+            [ngClass]="{'marker-selected': compareDayMarkers(mark, actMarker)}"></Label>
         <Label *ngFor="let marker of markers; index as i" [row]="getRow(i)" [col]="getCol(i)" class="icon" [ngClass]="marker.cssClass"
-            [text]="marker.icon" (tap)="onTap(marker)"></Label>
+            [text]="marker.icon" (tap)="onSelectMarker(marker)"></Label>
     </GridLayout>
+    
     <GridLayout rows="auto" columns="auto,*">
-        <Button col="0" text="Törlés" class="btn btn-primary" (tap)="onTap(null)"></Button>
+        <Button col="0" text="Törlés" class="btn btn-primary" (tap)="onDelete()"></Button>
         <Button col="1" text="Mentés" class="btn btn-primary" (tap)="onSave()"></Button>
     </GridLayout>
+
 </StackLayout>
